@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+    开票申请的MyBatis映射文件.
+    作者：余展鹏.
+    文件由鹏业软件模型工具生成(模板名称：JavaMyBatisMap),一般不应直接修改此文件.
+    Copyright (C) 2008 - 鹏业软件公司
+-->
+
+<mapper namespace="com.pengesoft.crmsystem.domain.entity.dao.InvoiceApplyDao">
+
+    <resultMap type="com.pengesoft.crmsystem.domain.entity.InvoiceApply" id="invoiceApplyResultMap">
+        <id property="invoiceApplyId" column="InvoiceApplyId" />
+        <result property="userId" column="UserId" />
+        <result property="userId" column="UserId" />
+        <result property="name" column="Name" />
+        <result property="contractCode" column="ContractCode" />
+        <result property="phaseId" column="PhaseId" />
+        <result property="invoiceApplyIsDeal" column="InvoiceApplyIsDeal" />
+        <result property="invoiceApplyAmount" column="InvoiceApplyAmount" />
+    </resultMap>
+
+    <sql id="invoiceApplyBaseCol">
+        t.InvoiceApplyId,t.UserId,t.Name,t.ContractCode,t.PhaseId,t.InvoiceApplyIsDeal,t.InvoiceApplyAmount
+    </sql>
+
+    <sql id="invoiceApplyAllCol">
+        t.InvoiceApplyId,t.UserId,t.Name,t.ContractCode,t.PhaseId,t.InvoiceApplyIsDeal,t.InvoiceApplyAmount
+    </sql>
+
+    <sql id="invoiceApplyWhereSql">
+        <trim prefix="WHERE" prefixOverrides="and |or ">
+            <if test="invoiceApplyId != null">
+                <if test="invoiceApplyId == ''">
+                    and (t.InvoiceApplyId is null or t.InvoiceApplyId = '')
+                </if>
+                <if test="invoiceApplyId != ''">
+                    and t.InvoiceApplyId like #{invoiceApplyId}
+                </if>
+            </if>
+            <if test="invoiceApplyId_Enum != null">
+                and t.InvoiceApplyId in
+                <foreach collection="invoiceApplyId_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="userId != null">
+                <if test="userId == ''">
+                    and (t.UserId is null or t.UserId = '')
+                </if>
+                <if test="userId != ''">
+                    and t.UserId like #{userId}
+                </if>
+            </if>
+            <if test="userId_Enum != null">
+                and t.UserId in
+                <foreach collection="userId_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="name != null">
+                <if test="name == ''">
+                    and (t.Name is null or t.Name = '')
+                </if>
+                <if test="name != ''">
+                    and t.Name like #{name}
+                </if>
+            </if>
+            <if test="name_Enum != null">
+                and t.Name in
+                <foreach collection="name_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="contractCode != null">
+                <if test="contractCode == ''">
+                    and (t.ContractCode is null or t.ContractCode = '')
+                </if>
+                <if test="contractCode != ''">
+                    and t.ContractCode like #{contractCode}
+                </if>
+            </if>
+            <if test="contractCode_Enum != null">
+                and t.ContractCode in
+                <foreach collection="contractCode_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="phaseId != null">
+                <if test="phaseId == ''">
+                    and (t.PhaseId is null or t.PhaseId = '')
+                </if>
+                <if test="phaseId != ''">
+                    and t.PhaseId like #{phaseId}
+                </if>
+            </if>
+            <if test="phaseId_Enum != null">
+                and t.PhaseId in
+                <foreach collection="phaseId_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="invoiceApplyIsDeal != null">and t.InvoiceApplyIsDeal = #{invoiceApplyIsDeal}</if>
+            <if test="invoiceApplyIsDeal_L != null"><![CDATA[ and t.InvoiceApplyIsDeal >= #{invoiceApplyIsDeal_L} and t.InvoiceApplyIsDeal <= #{invoiceApplyIsDeal_H} ]]></if>
+            <if test="invoiceApplyIsDeal_Enum != null">
+                and t.InvoiceApplyIsDeal in
+                <foreach collection="invoiceApplyIsDeal_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="invoiceApplyAmount != null">and t.InvoiceApplyAmount = #{invoiceApplyAmount}</if>
+            <if test="invoiceApplyAmount_L != null"><![CDATA[ and t.InvoiceApplyAmount >= #{invoiceApplyAmount_L} and t.InvoiceApplyAmount <= #{invoiceApplyAmount_H} ]]></if>
+            <if test="invoiceApplyAmount_Enum != null">
+                and t.InvoiceApplyAmount in
+                <foreach collection="invoiceApplyAmount_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="_default_mulattr != null">
+                and (
+                <foreach collection="_default_mulattr" item="item" separator=" or ">
+                    <if test="item.name == 'invoiceApplyId'">t.InvoiceApplyId like #{item.value}</if>
+                    <if test="item.name == 'userId'">t.UserId like #{item.value}</if>
+                    <if test="item.name == 'name'">t.Name like #{item.value}</if>
+                    <if test="item.name == 'contractCode'">t.ContractCode like #{item.value}</if>
+                    <if test="item.name == 'phaseId'">t.PhaseId like #{item.value}</if>
+                    <if test="item.name == 'invoiceApplyIsDeal'">t.InvoiceApplyIsDeal = #{item.value}</if>
+                    <if test="item.name == 'invoiceApplyAmount'">t.InvoiceApplyAmount = #{item.value}</if>
+                </foreach>
+                )
+            </if>
+        </trim>
+    </sql>
+
+    <sql id="invoiceApplyOrderSql">
+        <trim prefix="ORDER BY" suffixOverrides=",">
+            <if test="_orderBys != null">
+                <foreach collection="_orderBys" item="item" open="" separator="," close="">
+                    <if test="item == 'invoiceApplyId'">t.InvoiceApplyId</if>
+                    <if test="item == 'invoiceApplyId_D'">t.InvoiceApplyId desc</if>
+                </foreach>
+            </if>
+        </trim>
+    </sql>
+
+    <insert id="insertInvoiceApply" parameterType="com.pengesoft.crmsystem.domain.entity.InvoiceApply">
+        insert into InvoiceApply(
+            InvoiceApplyId,
+            UserId,
+            Name,
+            ContractCode,
+            PhaseId,
+            InvoiceApplyIsDeal,
+            InvoiceApplyAmount
+        )values(
+            #{invoiceApplyId,jdbcType=VARCHAR},
+            #{userId,jdbcType=VARCHAR},
+            #{name,jdbcType=VARCHAR},
+            #{contractCode,jdbcType=VARCHAR},
+            #{phaseId,jdbcType=VARCHAR},
+            #{invoiceApplyIsDeal,jdbcType=INTEGER},
+            #{invoiceApplyAmount,jdbcType=DOUBLE}
+        )
+    </insert>
+
+    <update id="updateInvoiceApply" parameterType="com.pengesoft.crmsystem.domain.entity.InvoiceApply">
+        update InvoiceApply set
+            UserId = #{userId,jdbcType=VARCHAR},
+            Name = #{name,jdbcType=VARCHAR},
+            ContractCode = #{contractCode,jdbcType=VARCHAR},
+            PhaseId = #{phaseId,jdbcType=VARCHAR},
+            InvoiceApplyIsDeal = #{invoiceApplyIsDeal,jdbcType=INTEGER},
+            InvoiceApplyAmount = #{invoiceApplyAmount,jdbcType=DOUBLE}
+        where InvoiceApplyId=#{invoiceApplyId,jdbcType=VARCHAR}
+    </update>
+
+    <delete id="deleteInvoiceApply" parameterType="com.pengesoft.crmsystem.domain.entity.InvoiceApply">
+        delete from InvoiceApply where InvoiceApplyId=#{invoiceApplyId,jdbcType=VARCHAR}
+    </delete>
+
+
+    <select id="getBaseInvoiceApply" parameterType="com.pengesoft.crmsystem.domain.entity.InvoiceApply" resultMap="invoiceApplyResultMap">
+        select
+        <include refid="invoiceApplyBaseCol" />
+        from InvoiceApply t where t.InvoiceApplyId=#{invoiceApplyId,jdbcType=VARCHAR}
+    </select>
+
+    <select id="getInvoiceApply" parameterType="com.pengesoft.crmsystem.domain.entity.InvoiceApply" resultMap="invoiceApplyResultMap">
+        select t.* from InvoiceApply t where t.InvoiceApplyId=#{invoiceApplyId,jdbcType=VARCHAR}
+    </select>
+
+    <select id="queryInvoiceApplyCount" parameterType="java.util.Map" resultType="int">
+        select count(*) from InvoiceApply t
+        <include refid="invoiceApplyWhereSql" />
+    </select>
+
+    <select id="queryBaseInvoiceApplyList" parameterType="java.util.Map" resultMap="invoiceApplyResultMap">
+        select
+        <include refid="invoiceApplyBaseCol" />
+        from InvoiceApply t
+        <include refid="invoiceApplyWhereSql" />
+        <include refid="invoiceApplyOrderSql" />
+    </select>
+
+    <select id="queryInvoiceApplyList" parameterType="java.util.Map" resultMap="invoiceApplyResultMap">
+        select t.* from InvoiceApply t
+        <include refid="invoiceApplyWhereSql" />
+        <include refid="invoiceApplyOrderSql" />
+    </select>
+
+
+
+
+    <select id="queryInvoiceApplyNotDealList" parameterType="int" resultMap="invoiceApplyResultMap">
+        select t.* from InvoiceApply t
+        where t.InvoiceApplyIsDeal =#{InvoiceApplyIsDeal}
+    </select>
+</mapper>

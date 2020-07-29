@@ -1,0 +1,1672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="792875a3-db1a-4020-a076-c96df0ed251c" name="Default Changelist" comment="yzp">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/CustomerMgeSvr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/CustomerMgeSvr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/ICustomerMgeSvr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/ICustomerMgeSvr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="tools.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/component/tools.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerMgeSvr.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/CustomerMgeSvr.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="278" column="32" lean-forward="true" selection-start-line="278" selection-start-column="32" selection-end-line="278" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#12724#12741#0" expanded="true" />
+                <element signature="e#15251#15267#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContractMgeSvr.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/ContractMgeSvr.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="33" column="27" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/domain/entity/Customer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="113">
+              <caret line="259" selection-start-line="259" selection-end-line="259" />
+              <folding>
+                <element signature="e#4593#4594#0" expanded="true" />
+                <element signature="e#4826#4827#0" expanded="true" />
+                <element signature="e#4853#4854#0" expanded="true" />
+                <element signature="e#4893#4894#0" expanded="true" />
+                <element signature="e#4925#4926#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Person.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-frames/1.0-SNAPSHOT/ps-frames-1.0-20200204.040320-1.jar!/pengesoft/account/Person.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ICustomerMgeSvr.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/ICustomerMgeSvr.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="182" column="21" lean-forward="true" selection-start-line="182" selection-start-column="21" selection-end-line="182" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Authorize.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-frames/1.0-SNAPSHOT/ps-frames-1.0-20200204.040320-1.jar!/pengesoft/account/Authorize.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="55" column="36" lean-forward="true" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mybatis-Customer.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/domain/mapper/mybatis-Customer.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="404">
+              <caret line="347" column="27" selection-start-line="347" selection-start-column="16" selection-end-line="347" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>plugins</find>
+      <find>com.example.demo2.dao.UserInfoDao</find>
+      <find>insertUserInfo</find>
+      <find>com.example.demo2.domain.dao.UserInfoDao</find>
+      <find>addCacheRef</find>
+      <find>getSvrClient</find>
+      <find>queryContractListByProjectCodeOp0</find>
+      <find>sl</find>
+      <find>customerSmpleResultMap</find>
+      <find>CreateNewToken</find>
+      <find>getPersonListByIds</find>
+      <find>UserId</find>
+      <find>getCustomerLike</find>
+      <find>int deleteCustomer(Str</find>
+      <find>Login(</find>
+      <find>queryCustomerCountSea</find>
+      <find>模糊</find>
+      <find>模</find>
+      <find>allProjectList</find>
+      <find>getpc</find>
+      <find>customerPlevel</find>
+      <find>getprojectlist</find>
+      <find>getBacklogDataForSeller</find>
+      <find>getCustomerSeaListCat</find>
+      <find>自己</find>
+    </findStrings>
+    <dirStrings>
+      <dir>C:\WorkSpace\产品开发\JavaProducts\branches\20191107_1840\main\dwy-apps\demo2</dir>
+      <dir>D:\Crm\CrmSystem</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo2/domain/dao/UserInfoDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo2/domain/dao/mybatis-UserInfo.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/example/demo2/Demo2ApplicationTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo2/controller/IUserMgeSvr.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo2/controller/UserMgeSvr.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo2/Demo2Application.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/SqlMapConfig.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/Demo2Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/domain/QueryPara/InvoiceQueryPara.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/domain/entity/Phase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/domain/dao/IPhaseDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/utils/CreateTokenUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/utils/CreateJWT.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/annotation/UserLoginToken.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/annotation/PassToken.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/IUserSvr.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/IUserMgeSvr.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/domain/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/domain/dao/IUserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/config/InterceptorConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/filter/GlobalExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/TokenService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/domain/entity/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/domain/QueryPara/UserQueryPara.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/domain/mapper/mybatis-User.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/filter/AuthenticationInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/utils/JWTutils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/domain/mapper/mybatis-Contract.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/domain/entitylist/ContractList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/domain/entity/Invoice.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/IContractMgeSvr.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/ContractMgeSvr.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/IProjectMgeSvr.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/ProjectMgeSvr.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/UserMgeSvr.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/IPersonMgeSvr.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/PersonMgeSvr.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/config/corsFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/config/CorsFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/domain/QueryPara/CustomerQueryPara.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/domain/mapper/mybatis-Customer.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/config/WebConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/controller/ContractController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/component/tools.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/domain/entity/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/ICustomerMgeSvr.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/CustomerMgeSvr.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="C:\Users\reputation\.m2\repository" />
+        <option name="userSettingsFile" value="D:\document\company\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="crmsystem" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="crmsystem" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-527" />
+    <option name="y" value="34" />
+    <option name="width" value="1460" />
+    <option name="height" value="845" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+    <ConfirmationsSetting value="1" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CrmSystem" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CrmSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CrmSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CrmSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CrmSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="crmsystem" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CrmSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="crmsystem" type="462c0819:PsiDirectoryNode" />
+              <item name="annotation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CrmSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="crmsystem" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CrmSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="crmsystem" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CrmSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="crmsystem" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CrmSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="crmsystem" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CrmSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="crmsystem" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CrmSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="crmsystem" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="QueryPara" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CrmSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="crmsystem" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CrmSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.pengesoft:pengesoft-core:2.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.pengesoft:ps-auth:1.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.pengesoft:ps-auth:1.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="ps-auth-1.0-20191204.021145-11.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.pengesoft:ps-auth:1.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="ps-auth-1.0-20191204.021145-11.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.pengesoft:ps-auth:1.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="ps-auth-1.0-20191204.021145-11.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.pengesoft:ps-auth:1.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="ps-auth-1.0-20191204.021145-11.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="role" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.pengesoft:ps-auth:1.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="ps-auth-1.0-20191204.021145-11.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="role" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.pengesoft:ps-frames:1.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.pengesoft:ps-frames:1.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="ps-frames-1.0-20200204.040320-1.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.pengesoft:ps-frames:1.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="ps-frames-1.0-20200204.040320-1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="maps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.pengesoft:ps-frames:1.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="ps-frames-1.0-20200204.040320-1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="pengesoft" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.pengesoft:ps-frames:1.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="ps-frames-1.0-20200204.040320-1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="pengesoft" type="462c0819:PsiDirectoryNode" />
+              <item name="account" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.pengesoft:ps-frames:1.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="ps-frames-1.0-20200204.040320-1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="pengesoft" type="462c0819:PsiDirectoryNode" />
+              <item name="account" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.pengesoft:ps-frames:1.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="ps-frames-1.0-20200204.040320-1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="pengesoft" type="462c0819:PsiDirectoryNode" />
+              <item name="auther" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.pengesoft:ps-frames:1.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="ps-frames-1.0-20200204.040320-1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="pengesoft" type="462c0819:PsiDirectoryNode" />
+              <item name="logging" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.pengesoft:ps-frames:1.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="ps-frames-1.0-20200204.040320-1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="pengesoft" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder5" value="5" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="168" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="167" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="168" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="167" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="168" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="167" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder5" value="5" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="168" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="167" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="168" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="167" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="168" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth5" value="167" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574793537077" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.34668192" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.demo2" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\document\project\CrmSystem\src\main\java\com\pengesoft\crmsystem\domain\dao" />
+      <recent name="D:\document\project\CrmSystem\src\main\java\com\pengesoft\crmsystem\domain\mapper" />
+      <recent name="D:\document\project\CrmSystem\src\main\java\com\pengesoft\crmsystem\domain\QueryPara" />
+      <recent name="D:\document\project\CrmSystem\src\main\java\com\pengesoft\crmsystem\domain\entitylist" />
+      <recent name="D:\document\project\CrmSystem\src\main\java\com\pengesoft\crmsystem\domain\entity" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.pengesoft.crmsystem.service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\WorkSpace\产品开发\JavaProducts\branches\20191107_1840\main\dwy-apps\demo2\src\main\java\com\example\demo2\dao" />
+      <recent name="C:\WorkSpace\产品开发\JavaProducts\branches\20191107_1840\main\dwy-apps\demo2\src\main\java\com\example\demo2" />
+      <recent name="C:\WorkSpace\产品开发\JavaProducts\branches\20191107_1840\main\dwy-apps\demo2\src\main\resources" />
+    </key>
+  </component>
+  <component name="RestServicesNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="Found 4 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+        </path>
+        <path>
+          <item name="Found 4 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="CrmSystem" type="c588b436:RestServiceStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="svn" revision="157">D:\document\project\CrmSystem\src\main\java\com\pengesoft\crmsystem\service\ContractMgeSvr.java</PATH>
+          <PATH vcs="svn" revision="157">D:\document\project\CrmSystem\src\main\java\com\pengesoft\crmsystem\service\IProjectMgeSvr.java</PATH>
+          <PATH vcs="svn" revision="157">D:\document\project\CrmSystem\src\main\java\com\pengesoft\crmsystem\service\IContractMgeSvr.java</PATH>
+          <PATH vcs="svn" revision="157">D:\document\project\CrmSystem\src\main\java\com\pengesoft\crmsystem\service\ProjectMgeSvr.java</PATH>
+          <PATH vcs="svn" revision="157">D:\document\project\CrmSystem\src\main\java\com\pengesoft\crmsystem\domain\dao\IAttentionDao.java</PATH>
+          <PATH vcs="svn" revision="157">D:\document\project\CrmSystem\src\main\java\com\pengesoft\crmsystem\domain\mapper\mybatis-Contract.xml</PATH>
+          <PATH vcs="svn" revision="157">D:\document\project\CrmSystem\src\main\java\com\pengesoft\crmsystem\domain\mapper\mybatis-Project.xml</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="svn" revision="157">D:\document\project\CrmSystem\src\main\java\com\pengesoft\crmsystem\domain\mapper\mybatis-InvoiceApply.xml</PATH>
+          <PATH vcs="svn" revision="157">D:\document\project\CrmSystem\src\main\java\com\pengesoft\crmsystem\domain\entitylist\InvoiceApplyList.java</PATH>
+          <PATH vcs="svn" revision="157">D:\document\project\CrmSystem\src\main\java\com\pengesoft\crmsystem\domain\QueryPara\InvoiceApplyQueryPara.java</PATH>
+          <PATH vcs="svn" revision="157">D:\document\project\CrmSystem\src\main\java\com\pengesoft\crmsystem\domain\entity\InvoiceApply.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.YzpApplication">
+    <configuration name="tools" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.pengesoft.crmsystem.component.tools" />
+      <module name="CrmSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pengesoft.crmsystem.component.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="crmsystem [package]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="package" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+    </configuration>
+    <configuration name="YzpApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="CrmSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pengesoft.crmsystem.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.pengesoft.crmsystem.YzpApplication" />
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.YzpApplication" />
+      <item itemvalue="Application.tools" />
+      <item itemvalue="Maven.crmsystem [package]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.YzpApplication" />
+        <item itemvalue="Application.tools" />
+        <item itemvalue="Maven.crmsystem [package]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpringGeneralSettings">
+    <option name="allowAutoConfigurationMode" value="true" />
+  </component>
+  <component name="SvnConfiguration" myAutoUpdateAfterCommit="true" cleanupOnStartRun="true">
+    <configuration>C:\Users\reputation\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+    <option name="UPDATE_DEPTH" value="infinity" />
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\document\project\CrmSystem" />
+          <option name="myCopyRoot" value="D:\document\project\CrmSystem" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\document\project\CrmSystem" />
+          <option name="myCopyRoot" value="D:\document\project\CrmSystem" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="792875a3-db1a-4020-a076-c96df0ed251c" name="Default Changelist" comment="" />
+      <created>1574685168194</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574685168194</updated>
+      <workItem from="1574685172855" duration="5362000" />
+      <workItem from="1574691121172" duration="14468000" />
+      <workItem from="1574779489533" duration="5511000" />
+      <workItem from="1574793660736" duration="893000" />
+      <workItem from="1574830642065" duration="381000" />
+      <workItem from="1574841476683" duration="875000" />
+      <workItem from="1574842370346" duration="6447000" />
+      <workItem from="1585563998260" duration="418000" />
+      <workItem from="1585564429942" duration="1307000" />
+      <workItem from="1585639927787" duration="370000" />
+      <workItem from="1585640360523" duration="7201000" />
+      <workItem from="1585654192029" duration="14000" />
+      <workItem from="1585704263980" duration="26685000" />
+      <workItem from="1585790681331" duration="625000" />
+      <workItem from="1585791873934" duration="16388000" />
+      <workItem from="1585878006912" duration="769000" />
+      <workItem from="1585878791750" duration="11674000" />
+      <workItem from="1585897065475" duration="652000" />
+      <workItem from="1585897725390" duration="11574000" />
+      <workItem from="1586221937668" duration="117460000" />
+      <workItem from="1587104784802" duration="7163000" />
+      <workItem from="1587347007656" duration="30772000" />
+    </task>
+    <task id="LOCAL-00001" summary="Default Changelist">
+      <created>1585640603882</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585640603882</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Default Changelist">
+      <created>1585640718105</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585640718105</updated>
+    </task>
+    <task id="LOCAL-00003" summary="yzp">
+      <created>1585654070064</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1585654070064</updated>
+    </task>
+    <task id="LOCAL-00004" summary="yzp">
+      <created>1585654094054</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1585654094054</updated>
+    </task>
+    <task id="LOCAL-00005" summary="yzp1">
+      <created>1585654201828</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1585654201829</updated>
+    </task>
+    <task id="LOCAL-00006" summary="yzp1">
+      <created>1585704336791</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1585704336791</updated>
+    </task>
+    <task id="LOCAL-00007" summary="yzp">
+      <created>1585732062482</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1585732062482</updated>
+    </task>
+    <task id="LOCAL-00008" summary="zxr">
+      <created>1585792154938</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1585792154938</updated>
+    </task>
+    <task id="LOCAL-00009" summary="yzp">
+      <created>1585792204285</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1585792204285</updated>
+    </task>
+    <task id="LOCAL-00010" summary="zxr">
+      <created>1585814264105</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1585814264105</updated>
+    </task>
+    <task id="LOCAL-00011" summary="yzp">
+      <created>1585819384345</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1585819384345</updated>
+    </task>
+    <task id="LOCAL-00012" summary="yzp">
+      <created>1585819420842</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1585819420842</updated>
+    </task>
+    <task id="LOCAL-00013" summary="yzp">
+      <created>1585819454477</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1585819454477</updated>
+    </task>
+    <task id="LOCAL-00014" summary="yzp">
+      <created>1585819522986</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1585819522986</updated>
+    </task>
+    <task id="LOCAL-00015" summary="yzp">
+      <created>1585819542620</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1585819542620</updated>
+    </task>
+    <task id="LOCAL-00016" summary="yzp">
+      <created>1585819575907</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1585819575907</updated>
+    </task>
+    <task id="LOCAL-00017" summary="yzp">
+      <created>1585819629457</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1585819629457</updated>
+    </task>
+    <task id="LOCAL-00018" summary="yzp">
+      <created>1585819653899</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1585819653899</updated>
+    </task>
+    <task id="LOCAL-00019" summary="yzp">
+      <created>1585878033678</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1585878033678</updated>
+    </task>
+    <task id="LOCAL-00020" summary="yzp">
+      <created>1585896165403</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1585896165403</updated>
+    </task>
+    <task id="LOCAL-00021" summary="yzp">
+      <created>1585908809407</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1585908809407</updated>
+    </task>
+    <task id="LOCAL-00022" summary="yzp">
+      <created>1586230333304</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1586230333304</updated>
+    </task>
+    <task id="LOCAL-00023" summary="yzp">
+      <created>1586234827608</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1586234827608</updated>
+    </task>
+    <task id="LOCAL-00024" summary="yzp">
+      <created>1586312467530</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1586312467530</updated>
+    </task>
+    <task id="LOCAL-00025" summary="yzp">
+      <created>1586401456296</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1586401456296</updated>
+    </task>
+    <task id="LOCAL-00026" summary="12">
+      <created>1586498038828</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1586498038828</updated>
+    </task>
+    <task id="LOCAL-00027" summary="yzp">
+      <created>1586507073810</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1586507073810</updated>
+    </task>
+    <task id="LOCAL-00028" summary="yzp">
+      <created>1586943912235</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1586943912235</updated>
+    </task>
+    <task id="LOCAL-00029" summary="xr">
+      <created>1587449397502</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1587449397502</updated>
+    </task>
+    <task id="LOCAL-00030" summary="yzp">
+      <created>1587450940297</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1587450940297</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="267009000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="RestServices" order="5" weight="0.32969153" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.502149" side_tool="true" weight="0.33333334" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.28020567" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32904884" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="5" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2710027" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.6680217" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.3292683" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.3292683" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.497851" weight="0.41192412" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.3292683" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1895887" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32969153" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Statistic" order="11" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="MyBatis Log" order="7" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.19919029" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Tail" order="7" />
+      <window_info anchor="right" id="Word Book" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32791328" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="right" id="Maven" order="3" weight="0.19919029" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5707155" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Statistic" order="11" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29959515" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.5890183" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3294509" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3810316" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Default Changelist" />
+    <MESSAGE value="111" />
+    <MESSAGE value="yzp1" />
+    <MESSAGE value="zxr" />
+    <MESSAGE value="12" />
+    <MESSAGE value="xr" />
+    <MESSAGE value="yzp" />
+    <option name="LAST_COMMIT_MESSAGE" value="yzp" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/pengesoft/pengesoft-core/2.0-SNAPSHOT/pengesoft-core-2.0-SNAPSHOT-sources.jar!/pengesoft/web/ServiceJSClientProxy.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/pengesoft/pengesoft-core/2.0-SNAPSHOT/pengesoft-core-2.0-SNAPSHOT-sources.jar!/pengesoft/web/ServiceJSClientProxy.java</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/src/main/resources/libs/pengesoft-core-2.0-SNAPSHOT.jar!/pengesoft/web/ServiceJSClientProxy.class</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="100" />
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="this.hostdomain=&quot;https://fc.mypy.cn/&quot;" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>this.hostdomain=&quot;https://fc.mypy.cn/&quot;</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.hostdomain=null</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>suffixUrl=&quot;demo2&quot;</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>url.delete(url.length() - request1.getRequestURI().length(), url.length())</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="setValue">
+      <expression>
+        <expression-string>&quot;nested exception is org.apache.ibatis.exceptions.PersistenceException: \r\n### Error querying database.  Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for getPersonListByIds\r\n### Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for getPersonListByIds&quot;</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/UserMgeSvr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="42" selection-start-line="42" selection-end-line="44" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-frames/1.0-SNAPSHOT/ps-frames-1.0-20200204.040320-1.jar!/pengesoft/account/LoginInfo.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-frames/1.0-SNAPSHOT/ps-frames-1.0-20200204.040320-1.jar!/pengesoft/account/LoginResult.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-frames/1.0-SNAPSHOT/ps-frames-1.0-20200204.040320-1.jar!/pengesoft/account/dao/IPersonDao.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.8.RELEASE/spring-context-5.0.8.RELEASE.jar!/org/springframework/cache/Cache.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-330">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-auth/1.0-SNAPSHOT/ps-auth-1.0-20191204.021145-11.jar!/pengesoft/auth/annotation/RequiresPermissions.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="17" column="42" lean-forward="true" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/IPersonMgeSvr.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-auth/1.0-SNAPSHOT/ps-auth-1.0-20191204.021145-11.jar!/pengesoft/auth/resource/AuthResource.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/PersonMgeSvr.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/config/InterceptorConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-frames/1.0-SNAPSHOT/ps-frames-1.0-20200204.040320-1.jar!/maps/MsgSubscribe.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/SqlMapConfig.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-frames/1.0-SNAPSHOT/ps-frames-1.0-20200204.040320-1.jar!/pengesoft/account/dao/PersonDao.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="69" selection-start-line="16" selection-start-column="69" selection-end-line="16" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/domain/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/domain/QueryPara/CustomerQueryPara.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/config/SpringConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/config/CorsFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-auth/1.0-SNAPSHOT/ps-auth-1.0-20191204.021145-11.jar!/pengesoft/auth/authentication/AuthenticationServiceSvr.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="41" column="70" selection-start-line="41" selection-start-column="60" selection-end-line="41" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.0.8.RELEASE/spring-aop-5.0.8.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="481" selection-start-line="481" selection-end-line="481" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-auth/1.0-SNAPSHOT/ps-auth-1.0-20191204.021145-11.jar!/pengesoft/auth/aop/PermissionAspect.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-auth/1.0-SNAPSHOT/ps-auth-1.0-20191204.021145-11.jar!/pengesoft/auth/authentication/IAuthenticationServiceSvr.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/utils/GetNowTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/IContractMgeSvr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/config/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-frames/1.0-SNAPSHOT/ps-frames-1.0-20200204.040320-1.jar!/pengesoft/account/AccountManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-frames/1.0-SNAPSHOT/ps-frames-1.0-20200204.040320-1.jar!/pengesoft/utils/SysUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="83" column="51" selection-start-line="83" selection-start-column="51" selection-end-line="83" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-frames/1.0-SNAPSHOT/ps-frames-1.0-20200204.040320-1.jar!/pengesoft/account/Organizations.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-frames/1.0-SNAPSHOT/ps-frames-1.0-20200204.040320-1.jar!/pengesoft/account/OrgManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-frames/1.0-SNAPSHOT/ps-frames-1.0-20200204.040320-1.jar!/pengesoft/account/DepartmentManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" column="88" selection-start-line="16" selection-start-column="88" selection-end-line="16" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-frames/1.0-SNAPSHOT/ps-frames-1.0-20200204.040320-1.jar!/pengesoft/account/ComparerOrganization.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="57" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-frames/1.0-SNAPSHOT/ps-frames-1.0-20200204.040320-1.jar!/pengesoft/account/dao/IOrganizationDao.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-frames/1.0-SNAPSHOT/ps-frames-1.0-20200204.040320-1.jar!/pengesoft/account/dao/OrganizationDao.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/controller/ContractController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-frames/1.0-SNAPSHOT/ps-frames-1.0-20200204.040320-1.jar!/pengesoft/account/AuthCode.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-frames/1.0-SNAPSHOT/ps-frames-1.0-20200204.040320-1.jar!/pengesoft/account/SessionManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-frames/1.0-SNAPSHOT/ps-frames-1.0-20200204.040320-1.jar!/pengesoft/account/IAuthorize.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-frames/1.0-SNAPSHOT/ps-frames-1.0-20200204.040320-1.jar!/pengesoft/account/Authorize.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="55" column="36" lean-forward="true" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-frames/1.0-SNAPSHOT/ps-frames-1.0-20200204.040320-1.jar!/maps/Person.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7320">
+          <caret line="244" column="32" lean-forward="true" selection-start-line="244" selection-start-column="32" selection-end-line="244" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/domain/mapper/mybatis-Customer.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="347" column="27" selection-start-line="347" selection-start-column="16" selection-end-line="347" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/component/tools.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/domain/mapper/mybatis-Project.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="555" column="32" selection-start-line="555" selection-start-column="23" selection-end-line="555" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/ProjectMgeSvr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="562" column="23" lean-forward="true" selection-start-line="562" selection-start-column="23" selection-end-line="562" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/pengesoft/ps-frames/1.0-SNAPSHOT/ps-frames-1.0-20200204.040320-1.jar!/pengesoft/account/Person.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/domain/entity/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="259" selection-start-line="259" selection-end-line="259" />
+          <folding>
+            <element signature="e#4593#4594#0" expanded="true" />
+            <element signature="e#4826#4827#0" expanded="true" />
+            <element signature="e#4853#4854#0" expanded="true" />
+            <element signature="e#4893#4894#0" expanded="true" />
+            <element signature="e#4925#4926#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/ContractMgeSvr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="33" column="27" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/ICustomerMgeSvr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="182" column="21" lean-forward="true" selection-start-line="182" selection-start-column="21" selection-end-line="182" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pengesoft/crmsystem/service/CustomerMgeSvr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="278" column="32" lean-forward="true" selection-start-line="278" selection-start-column="32" selection-end-line="278" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#12724#12741#0" expanded="true" />
+            <element signature="e#15251#15267#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.34668192" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.34668192" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>CrmSystem</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.34668192" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.pengesoft:ps-auth:1.0-SNAPSHOT</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.545977" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

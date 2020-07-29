@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+    客户信息的MyBatis映射文件.
+    作者：曾小锐.
+    创建时间：2020/3/31 14:27:49.
+    文件由鹏业软件模型工具生成(模板名称：JavaMyBatisMap),一般不应直接修改此文件.
+    Copyright (C) 2008 - 鹏业软件公司
+-->
+
+<mapper namespace="com.pengesoft.crmsystem.domain.dao.CustomerDao">
+
+    <resultMap type="com.pengesoft.crmsystem.domain.entity.Customer" id="customerResultMap">
+    <id property="custId" column="CustId" />
+    <result property="custName" column="CustName" />
+    <result property="custEmail" column="CustEmail" />
+    <result property="custTel" column="CustTel" />
+    <result property="custPhone" column="CustPhone" />
+    <result property="custRemark" column="CustRemark" />
+    <result property="userId" column="UserId" />
+    <result property="contactName" column="ContactName" />
+    <result property="contactTel" column="ContactTel" />
+    <result property="contactDuty" column="ContactDuty" />
+    <result property="custRegionCode" column="CustRegionCode" />
+    <result property="custAddress" column="CustAddress" />
+    <result property="custCreateTime" column="CustCreateTime" />
+    <result property="custUpdateTime" column="CustUpdateTime" />
+</resultMap>
+
+<resultMap type="java.util.HashMap" id="customerSmpleResultMap">
+    <id property="custId" column="CustId" />
+    <result property="custName" column="CustName" />
+    <result property="custTel" column="CustTel" />
+    <result property="custRemark" column="CustRemark" />
+    <result property="userId" column="UserId" />
+    <result property="contactName" column="ContactName" />
+    <result property="contactTel" column="ContactTel" />
+    <result property="custAddress" column="CustAddress" />
+</resultMap>
+
+    <sql id="customerBaseCol">
+        t.CustId,t.CustName,t.CustEmail,t.CustTel,t.CustPhone,t.CustRemark,t.UserId,t.ContactName,t.ContactTel,t.ContactDuty,t.CustRegionCode,t.CustAddress,t.CustCreateTime,t.CustUpdateTime
+    </sql>
+
+    <sql id="customerWhereSql">
+        <trim prefix="WHERE" prefixOverrides="and |or ">
+            <if test="custId != null">and t.CustId = #{custId}</if>
+            <if test="custId_L != null"><![CDATA[ and t.CustId >= #{custId_L} and t.CustId <= #{custId_H} ]]></if>
+            <if test="custId_Enum != null">
+                and t.CustId in
+                <foreach collection="custId_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="custName != null">
+                <if test="custName == ''">
+                    and (t.CustName is null or t.CustName = '')
+                </if>
+                <if test="custName != ''">
+                    and t.CustName like #{custName}
+                </if>
+            </if>
+            <if test="custName_Enum != null">
+                and t.CustName in
+                <foreach collection="custName_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="custEmail != null">
+                <if test="custEmail == ''">
+                    and (t.CustEmail is null or t.CustEmail = '')
+                </if>
+                <if test="custEmail != ''">
+                    and t.CustEmail like #{custEmail}
+                </if>
+            </if>
+            <if test="custEmail_Enum != null">
+                and t.CustEmail in
+                <foreach collection="custEmail_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="custTel != null">
+                <if test="custTel == ''">
+                    and (t.CustTel is null or t.CustTel = '')
+                </if>
+                <if test="custTel != ''">
+                    and t.CustTel like #{custTel}
+                </if>
+            </if>
+            <if test="custTel_Enum != null">
+                and t.CustTel in
+                <foreach collection="custTel_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="custPhone != null">
+                <if test="custPhone == ''">
+                    and (t.CustPhone is null or t.CustPhone = '')
+                </if>
+                <if test="custPhone != ''">
+                    and t.CustPhone like #{custPhone}
+                </if>
+            </if>
+            <if test="custPhone_Enum != null">
+                and t.CustPhone in
+                <foreach collection="custPhone_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="custRemark != null">
+                <if test="custRemark == ''">
+                    and (t.CustRemark is null or t.CustRemark = '')
+                </if>
+                <if test="custRemark != ''">
+                    and t.CustRemark like #{custRemark}
+                </if>
+            </if>
+            <if test="custRemark_Enum != null">
+                and t.CustRemark in
+                <foreach collection="custRemark_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="userId != null">and t.UserId = #{userId}</if>
+            <if test="userId_L != null"><![CDATA[ and t.UserId >= #{userId_L} and t.UserId <= #{userId_H} ]]></if>
+            <if test="userId_Enum != null">
+                and t.UserId in
+                <foreach collection="userId_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="contactName != null">
+                <if test="contactName == ''">
+                    and (t.ContactName is null or t.ContactName = '')
+                </if>
+                <if test="contactName != ''">
+                    and t.ContactName like #{contactName}
+                </if>
+            </if>
+            <if test="contactName_Enum != null">
+                and t.ContactName in
+                <foreach collection="contactName_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="contactTel != null">
+                <if test="contactTel == ''">
+                    and (t.ContactTel is null or t.ContactTel = '')
+                </if>
+                <if test="contactTel != ''">
+                    and t.ContactTel like #{contactTel}
+                </if>
+            </if>
+            <if test="contactTel_Enum != null">
+                and t.ContactTel in
+                <foreach collection="contactTel_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="contactDuty != null">
+                <if test="contactDuty == ''">
+                    and (t.ContactDuty is null or t.ContactDuty = '')
+                </if>
+                <if test="contactDuty != ''">
+                    and t.ContactDuty like #{contactDuty}
+                </if>
+            </if>
+            <if test="contactDuty_Enum != null">
+                and t.ContactDuty in
+                <foreach collection="contactDuty_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="custRegionCode != null">and t.CustRegionCode = #{custRegionCode}</if>
+            <if test="custRegionCode_L != null"><![CDATA[ and t.CustRegionCode >= #{custRegionCode_L} and t.CustRegionCode <= #{custRegionCode_H} ]]></if>
+            <if test="custRegionCode_Enum != null">
+                and t.CustRegionCode in
+                <foreach collection="custRegionCode_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="custAddress != null">
+                <if test="custAddress == ''">
+                    and (t.CustAddress is null or t.CustAddress = '')
+                </if>
+                <if test="custAddress != ''">
+                    and t.CustAddress like #{custAddress}
+                </if>
+            </if>
+            <if test="custAddress_Enum != null">
+                and t.CustAddress in
+                <foreach collection="custAddress_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="custCreateTime != null">and t.CustCreateTime = #{custCreateTime}</if>
+            <if test="custCreateTime_S != null"><![CDATA[ and t.CustCreateTime > #{custCreateTime_S} and t.CustCreateTime < #{custCreateTime_E} ]]></if>
+            <if test="custUpdateTime != null">and t.CustUpdateTime = #{custUpdateTime}</if>
+            <if test="custUpdateTime_S != null"><![CDATA[ and t.CustUpdateTime > #{custUpdateTime_S} and t.CustUpdateTime < #{custUpdateTime_E} ]]></if>
+            <if test="_default_mulattr != null">
+                and (
+                <foreach collection="_default_mulattr" item="item" separator=" or ">
+                    <if test="item.name == 'custId'">t.CustId = #{item.value}</if>
+                    <if test="item.name == 'custName'">t.CustName like #{item.value}</if>
+                    <if test="item.name == 'custEmail'">t.CustEmail like #{item.value}</if>
+                    <if test="item.name == 'custTel'">t.CustTel like #{item.value}</if>
+                    <if test="item.name == 'custPhone'">t.CustPhone like #{item.value}</if>
+                    <if test="item.name == 'custRemark'">t.CustRemark like #{item.value}</if>
+                    <if test="item.name == 'userId'">t.UserId = #{item.value}</if>
+                    <if test="item.name == 'contactName'">t.ContactName like #{item.value}</if>
+                    <if test="item.name == 'contactTel'">t.ContactTel like #{item.value}</if>
+                    <if test="item.name == 'contactDuty'">t.ContactDuty like #{item.value}</if>
+                    <if test="item.name == 'custRegionCode'">t.CustRegionCode = #{item.value}</if>
+                    <if test="item.name == 'custAddress'">t.CustAddress like #{item.value}</if>
+                    <if test="item.name == 'custCreateTime'">t.CustCreateTime = #{item.value}</if>
+                    <if test="item.name == 'custUpdateTime'">t.CustUpdateTime = #{item.value}</if>
+                </foreach>
+                )
+            </if>
+        </trim>
+    </sql>
+
+    <sql id="customerOrderSql">
+        <trim prefix="ORDER BY" suffixOverrides=",">
+            <if test="_orderBys != null">
+                <foreach collection="_orderBys" item="item" open="" separator="," close="">
+                    <if test="item == 'custId'">t.CustId</if>
+                    <if test="item == 'custId_D'">t.CustId desc</if>
+                    <if test="item == 'custRegionCode'">t.CustRegionCode</if>
+                    <if test="item == 'custRegionCode_D'">t.CustRegionCode desc</if>
+                    <if test="item == 'custCreateTime'">t.CustCreateTime</if>
+                    <if test="item == 'custCreateTime_D'">t.CustCreateTime desc</if>
+                    <if test="item == 'custUpdateTime'">t.CustUpdateTime</if>
+                    <if test="item == 'custUpdateTime_D'">t.CustUpdateTime desc</if>
+                </foreach>
+            </if>
+        </trim>
+    </sql>
+
+    <insert id="insertCustomer" parameterType="com.pengesoft.crmsystem.domain.entity.Customer">
+        insert into Customer_tb(
+            CustName,
+            CustEmail,
+            CustTel,
+            CustPhone,
+            CustRemark,
+            UserId,
+            ContactName,
+            ContactTel,
+            ContactDuty,
+            CustRegionCode,
+            CustAddress,
+            CustCreateTime,
+            CustUpdateTime
+        )values(
+            #{custName,jdbcType=VARCHAR},
+            #{custEmail,jdbcType=VARCHAR},
+            #{custTel,jdbcType=VARCHAR},
+            #{custPhone,jdbcType=VARCHAR},
+            #{custRemark,jdbcType=VARCHAR},
+            #{userId,jdbcType=VARCHAR},
+            #{contactName,jdbcType=VARCHAR},
+            #{contactTel,jdbcType=VARCHAR},
+            #{contactDuty,jdbcType=VARCHAR},
+            #{custRegionCode,jdbcType=INTEGER},
+            #{custAddress,jdbcType=VARCHAR},
+            #{custCreateTime,jdbcType=TIMESTAMP},
+            #{custUpdateTime,jdbcType=TIMESTAMP}
+        )
+    </insert>
+
+    <update id="updateCustomer" parameterType="com.pengesoft.crmsystem.domain.entity.Customer">
+        update Customer_tb set
+            CustName = #{custName,jdbcType=VARCHAR},
+            CustEmail = #{custEmail,jdbcType=VARCHAR},
+            CustTel = #{custTel,jdbcType=VARCHAR},
+            CustPhone = #{custPhone,jdbcType=VARCHAR},
+            CustRemark = #{custRemark,jdbcType=VARCHAR},
+            UserId = #{userId,jdbcType=VARCHAR},
+            ContactName = #{contactName,jdbcType=VARCHAR},
+            ContactTel = #{contactTel,jdbcType=VARCHAR},
+            ContactDuty = #{contactDuty,jdbcType=VARCHAR},
+            CustRegionCode = #{custRegionCode,jdbcType=INTEGER},
+            CustAddress = #{custAddress,jdbcType=VARCHAR},
+            CustCreateTime = #{custCreateTime,jdbcType=TIMESTAMP},
+            CustUpdateTime = #{custUpdateTime,jdbcType=TIMESTAMP}
+        where CustId=#{custId,jdbcType=INTEGER}
+    </update>
+
+    <delete id="deleteCustomer" parameterType="com.pengesoft.crmsystem.domain.entity.Customer">
+        delete from Customer_tb where CustId=#{custId,jdbcType=INTEGER}
+    </delete>
+
+
+    <select id="getBaseCustomer" parameterType="com.pengesoft.crmsystem.domain.entity.Customer" resultMap="customerResultMap">
+        select
+        <include refid="customerBaseCol" />
+        from Customer_tb t where t.CustId=#{custId,jdbcType=INTEGER} order by CustUpdateTime desc
+    </select>
+
+    <select id="getCustomer" parameterType="com.pengesoft.crmsystem.domain.entity.Customer" resultMap="customerResultMap">
+        select t.* from Customer_tb t where t.CustId=#{custId,jdbcType=INTEGER} order by CustUpdateTime desc
+    </select>
+
+    <select id="queryCustomerCount" parameterType="java.util.Map" resultType="int">
+        select count(*) from Customer_tb t
+        <include refid="customerWhereSql" />
+    </select>
+
+    <select id="queryCustomerCountSea" parameterType="java.util.Map" resultType="int">
+        select count(*) from Customer_tb t where  UserId is null
+    </select>
+
+    <select id="queryBaseCustomerList" parameterType="java.util.Map" resultMap="customerResultMap">
+        select
+        <include refid="customerBaseCol" />
+        from Customer_tb t
+        <include refid="customerWhereSql" />
+        <include refid="customerOrderSql" />
+        order by CustUpdateTime desc
+    </select>
+
+    <select id="queryCustomerList" parameterType="java.util.Map" resultMap="customerResultMap">
+    select t.* from Customer_tb t
+    <include refid="customerWhereSql" />
+    <include refid="customerOrderSql" />
+        order by CustUpdateTime desc
+</select>
+
+    <update id="updateSomeCustomer" parameterType="com.pengesoft.crmsystem.domain.entity.Customer">
+        update Customer_tb set
+            CustName = #{custName,jdbcType=VARCHAR},
+            CustEmail = #{custEmail,jdbcType=VARCHAR},
+            CustTel = #{custTel,jdbcType=VARCHAR},
+            CustPhone = #{custPhone,jdbcType=VARCHAR},
+            CustRemark = #{custRemark,jdbcType=VARCHAR},
+            CustUpdateTime = #{custUpdateTime,jdbcType=TIMESTAMP},
+            CustAddress = #{custAddress,jdbcType=VARCHAR}
+        where CustId=#{custId,jdbcType=INTEGER}
+    </update>
+    <update id="updateCustomerDistribute" parameterType="com.pengesoft.crmsystem.domain.entity.Customer">
+        update Customer_tb set
+            UserId = #{userId,jdbcType=VARCHAR},
+            CustUpdateTime = #{custUpdateTime,jdbcType=TIMESTAMP}
+        where CustId=#{custId,jdbcType=INTEGER}
+    </update>
+
+    <select id="getSimpleInfo" parameterType="com.pengesoft.crmsystem.domain.entity.Customer" resultMap="customerSmpleResultMap">
+        select CustId, CustName,CustTel,CustRemark,CustAddress,ContactName,ContactTel from Customer_tb
+        <include refid="customerWhereSql" />
+        order by CustUpdateTime desc
+    </select>
+
+    <update id="updateCustomerContact" parameterType="com.pengesoft.crmsystem.domain.entity.Customer">
+        update Customer_tb set
+            ContactName = #{contactName,jdbcType=VARCHAR},
+            ContactTel = #{contactTel,jdbcType=VARCHAR},
+            ContactDuty = #{contactDuty,jdbcType=VARCHAR},
+            CustUpdateTime = #{custUpdateTime,jdbcType=TIMESTAMP}
+        where CustId=#{custId,jdbcType=VARCHAR}
+    </update>
+
+    <select id="queryCustomerLike" parameterType="java.util.HashMap" resultMap="customerResultMap">
+        select *
+        from Customer_tb t where 1=1
+        <foreach collection="idlist" item="item" open="and (" close=")" separator="or">
+            CustId=#{item}
+        </foreach>
+        <if test="Str!=null and Str!=''">
+            and (t.CustName like '%${Str}%'or t.CustAddress like '%${Str}%'or t.ContactName like '%${Str}%')
+        </if>
+        order by CustUpdateTime desc
+    </select>
+
+    <select id="customersea" parameterType="com.pengesoft.crmsystem.domain.entity.Customer" resultMap="customerResultMap">
+        select * from Customer_tb where  UserId is null order by CustUpdateTime desc
+    </select>
+</mapper>

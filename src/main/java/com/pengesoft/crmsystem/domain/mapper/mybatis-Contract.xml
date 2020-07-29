@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+    合同信息的MyBatis映射文件.
+    作者：余展鹏.
+    创建时间：2020/4/2 15:35:49.
+    文件由鹏业软件模型工具生成(模板名称：JavaMyBatisMap),一般不应直接修改此文件.
+    Copyright (C) 2008 - 鹏业软件公司
+-->
+
+<mapper namespace="com.pengesoft.crmsystem.domain.dao.ContractDao">
+
+    <resultMap type="com.pengesoft.crmsystem.domain.entity.Contract" id="contractResultMap">
+        <id property="contractCode" column="ContractCode"/>
+        <result property="projectCode" column="ProjectCode"/>
+        <result property="contractName" column="ContractName"/>
+        <result property="contractStatus" column="ContractStatus"/>
+        <result property="contractType" column="ContractType"/>
+        <result property="partyA" column="PartyA"/>
+        <result property="partyB" column="PartyB"/>
+        <result property="partyC" column="PartyC"/>
+        <result property="contractAmount" column="ContractAmount"/>
+        <result property="contractAlreadyRec" column="ContractAlreadyRec"/>
+        <result property="contractNotYetRec" column="ContractNotYetRec"/>
+        <result property="contractParentCode" column="ContractParentCode"/>
+        <result property="contractCreateTime" column="ContractCreateTime"/>
+        <result property="contractSignTime" column="ContractSignTime"/>
+        <result property="contractEndTime" column="ContractEndTime"/>
+        <result property="contractEffectTime" column="ContractEffectTime"/>
+        <result property="contractNoEffectTime" column="ContractNoEffectTime"/>
+        <result property="contractRemark" column="ContractRemark"/>
+        <result property="invoiceList.jsonText" column="InvoiceList"/>
+        <result property="receivableList.jsonText" column="ReceivableList"/>
+        <result property="phaseList.jsonText" column="PhaseList"/>
+        <result property="invoiceApplyList.jsonText" column="InvoiceApplyList"/>
+    </resultMap>
+
+    <resultMap type="com.pengesoft.crmsystem.domain.entity.ProjectContractRet" id="projectContractRetResultMap">
+        <id property="contractCode" column="ContractCode"/>
+        <result property="projectCode" column="ProjectCode"/>
+        <result property="projectName" column="ProjectName"/>
+        <result property="userName" column="Name"/>
+        <result property="custName" column="CustName"/>
+        <result property="projectStatus" column="ProjectStatus"/>
+        <result property="contractName" column="ContractName"/>
+        <result property="contractStatus" column="ContractStatus"/>
+        <result property="contractType" column="ContractType"/>
+        <result property="partyA" column="PartyA"/>
+        <result property="partyB" column="PartyB"/>
+        <result property="partyC" column="PartyC"/>
+        <result property="contractAmount" column="ContractAmount"/>
+        <result property="contractAlreadyRec" column="ContractAlreadyRec"/>
+        <result property="contractNotYetRec" column="ContractNotYetRec"/>
+        <result property="contractParentCode" column="ContractParentCode"/>
+        <result property="contractCreateTime" column="ContractCreateTime"/>
+        <result property="contractSignTime" column="ContractSignTime"/>
+        <result property="contractEndTime" column="ContractEndTime"/>
+        <result property="contractEffectTime" column="ContractEffectTime"/>
+        <result property="contractNoEffectTime" column="ContractNoEffectTime"/>
+        <result property="contractRemark" column="ContractRemark"/>
+        <result property="invoiceList.jsonText" column="InvoiceList"/>
+        <result property="receivableList.jsonText" column="ReceivableList"/>
+        <result property="phaseList.jsonText" column="PhaseList"/>
+        <result property="invoiceApplyList.jsonText" column="InvoiceApplyList"/>
+    </resultMap>
+
+    <resultMap type="java.util.HashMap" id="projectContractRetResultHashMap">
+        <id property="ContractCode" column="ContractCode"/>
+        <result property="ProjectCode" column="ProjectCode"/>
+        <result property="ProjectName" column="ProjectName"/>
+        <result property="userName" column="Name"/>
+        <result property="custName" column="CustName"/>
+        <result property="ProjectStatus" column="ProjectStatus"/>
+        <result property="ContractName" column="ContractName"/>
+        <result property="ContractStatus" column="ContractStatus"/>
+        <result property="ContractType" column="ContractType"/>
+        <result property="PartyA" column="PartyA"/>
+        <result property="PartyB" column="PartyB"/>
+        <result property="PartyC" column="PartyC"/>
+        <result property="ContractAmount" column="ContractAmount"/>
+        <result property="ContractAlreadyRec" column="ContractAlreadyRec"/>
+        <result property="ContractNotYetRec" column="ContractNotYetRec"/>
+        <result property="ContractParentCode" column="ContractParentCode"/>
+        <result property="ContractCreateTime" column="ContractCreateTime"/>
+        <result property="ContractSignTime" column="ContractSignTime"/>
+        <result property="ContractEndTime" column="ContractEndTime"/>
+        <result property="ContractEffectTime" column="ContractEffectTime"/>
+        <result property="ContractNoEffectTime" column="ContractNoEffectTime"/>
+        <result property="ContractRemark" column="ContractRemark"/>
+        <result property="InvoiceList" column="InvoiceList"/>
+        <result property="ReceivableList" column="ReceivableList"/>
+        <result property="PhaseList" column="PhaseList"/>
+        <result property="InvoiceApplyList" column="InvoiceApplyList"/>
+    </resultMap>
+
+    <resultMap type="java.util.HashMap" id="projectContractRetResultHashMapOption1">
+        <id property="ContractCode" column="ContractCode"/>
+        <result property="ProjectCode" column="ProjectCode"/>
+        <result property="ProjectName" column="ProjectName"/>
+        <result property="userName" column="Name"/>
+        <result property="custName" column="CustName"/>
+        <result property="PartyA" column="PartyA"/>
+        <result property="ContractName" column="ContractName"/>
+        <result property="ContractAmount" column="ContractAmount"/>
+    </resultMap>
+
+    <resultMap type="java.util.HashMap" id="projectContractRetResultHashMapOption2">
+        <id property="ContractCode" column="ContractCode"/>
+        <result property="ProjectCode" column="ProjectCode"/>
+        <result property="ProjectName" column="ProjectName"/>
+        <result property="userName" column="Name"/>
+        <result property="custName" column="CustName"/>
+        <result property="PartyA" column="PartyA"/>
+        <result property="ProjectStatus" column="ProjectStatus"/>
+        <result property="ContractName" column="ContractName"/>
+        <result property="ContractStatus" column="ContractStatus"/>
+        <result property="ContractType" column="ContractType"/>
+        <result property="PartyA" column="PartyA"/>
+        <result property="ContractAmount" column="ContractAmount"/>
+        <result property="ContractAlreadyRec" column="ContractAlreadyRec"/>
+        <result property="ContractNotYetRec" column="ContractNotYetRec"/>
+        <result property="ContractEffectTime" column="ContractEffectTime"/>
+        <result property="ContractNoEffectTime" column="ContractNoEffectTime"/>
+    </resultMap>
+
+
+    <sql id="contractBaseCol">
+        t.ContractCode,t.ProjectCode,t.ContractName,t.ContractStatus,t.ContractType,t.PartyA,t.PartyB,t.PartyC,t.ContractAmount,t.ContractAlreadyRec,t.ContractNotYetRec,t.ContractParentCode,t.ContractCreateTime,t.ContractSignTime,t.ContractEndTime,t.ContractEffectTime,t.ContractNoEffectTime,t.ContractRemark,t.InvoiceList,t.ReceivableList,t.PhaseList,t.InvoiceApplyList
+    </sql>
+
+    <sql id="contractAllCol">
+        t.ContractCode,t.ProjectCode,t.ContractName,t.ContractStatus,t.ContractType,t.PartyA,t.PartyB,t.PartyC,t.ContractAmount,t.ContractAlreadyRec,t.ContractNotYetRec,t.ContractParentCode,t.ContractCreateTime,t.ContractSignTime,t.ContractEndTime,t.ContractEffectTime,t.ContractNoEffectTime,t.ContractRemark,t.InvoiceList,t.ReceivableList,t.PhaseList,t.InvoiceApplyList
+    </sql>
+
+    <sql id="contractSimpleDetail">
+      c.contractCode,c.ProjectCode,c.ContractName,c.ContractAmount,c.PartyA
+    </sql>
+    <sql id="contractMoreDetail">
+      c.contractCode,c.ProjectCode,c.ContractName,c.ContractAmount,c.PartyA,c.ContractAlreadyRec,c.ContractNotYetRec,c.ContractEffectTime,c.ContractNoEffectTime
+    </sql>
+    <!--p.UserName没有，因为没有实际销售用户名字-->
+    <sql id="projectSimpleDetail">
+p.ProjectName,p.UserId,p.ProjectCode
+    </sql>
+
+    <sql id="contractWhereSql">
+        <trim prefix="WHERE" prefixOverrides="and |or ">
+            <if test="contractCode != null">
+                <if test="contractCode == ''">
+                    and (t.ContractCode is null or t.ContractCode = '')
+                </if>
+                <if test="contractCode != ''">
+                    and t.ContractCode like #{contractCode}
+                </if>
+            </if>
+            <if test="contractCode_Enum != null">
+                and t.ContractCode in
+                <foreach collection="contractCode_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="projectCode != null">
+                <if test="projectCode == ''">
+                    and (t.ProjectCode is null or t.ProjectCode = '')
+                </if>
+                <if test="projectCode != ''">
+                    and t.ProjectCode like #{projectCode}
+                </if>
+            </if>
+            <if test="projectCode_Enum != null">
+                and t.ProjectCode in
+                <foreach collection="projectCode_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="contractName != null">
+                <if test="contractName == ''">
+                    and (t.ContractName is null or t.ContractName = '')
+                </if>
+                <if test="contractName != ''">
+                    and t.ContractName like #{contractName}
+                </if>
+            </if>
+            <if test="contractName_Enum != null">
+                and t.ContractName in
+                <foreach collection="contractName_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="contractStatus != null">and t.ContractStatus = #{contractStatus}</if>
+            <if test="contractStatus_L != null">
+                <![CDATA[ and t.ContractStatus >= #{contractStatus_L} and t.ContractStatus <= #{contractStatus_H} ]]></if>
+            <if test="contractStatus_Enum != null">
+                and t.ContractStatus in
+                <foreach collection="contractStatus_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="contractType != null">
+                <if test="contractType == ''">
+                    and (t.ContractType is null or t.ContractType = '')
+                </if>
+                <if test="contractType != ''">
+                    and t.ContractType like #{contractType}
+                </if>
+            </if>
+            <if test="contractType_Enum != null">
+                and t.ContractType in
+                <foreach collection="contractType_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="partyA != null">
+                <if test="partyA == ''">
+                    and (t.PartyA is null or t.PartyA = '')
+                </if>
+                <if test="partyA != ''">
+                    and t.PartyA like #{partyA}
+                </if>
+            </if>
+            <if test="partyA_Enum != null">
+                and t.PartyA in
+                <foreach collection="partyA_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="partyB != null">
+                <if test="partyB == ''">
+                    and (t.PartyB is null or t.PartyB = '')
+                </if>
+                <if test="partyB != ''">
+                    and t.PartyB like #{partyB}
+                </if>
+            </if>
+            <if test="partyB_Enum != null">
+                and t.PartyB in
+                <foreach collection="partyB_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="partyC != null">
+                <if test="partyC == ''">
+                    and (t.PartyC is null or t.PartyC = '')
+                </if>
+                <if test="partyC != ''">
+                    and t.PartyC like #{partyC}
+                </if>
+            </if>
+            <if test="partyC_Enum != null">
+                and t.PartyC in
+                <foreach collection="partyC_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="contractAmount != null">and t.ContractAmount = #{contractAmount}</if>
+            <if test="contractAmount_L != null">
+                <![CDATA[ and t.ContractAmount >= #{contractAmount_L} and t.ContractAmount <= #{contractAmount_H} ]]></if>
+            <if test="contractAmount_Enum != null">
+                and t.ContractAmount in
+                <foreach collection="contractAmount_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="contractAlreadyRec != null">and t.ContractAlreadyRec = #{contractAlreadyRec}</if>
+            <if test="contractAlreadyRec_L != null">
+                <![CDATA[ and t.ContractAlreadyRec >= #{contractAlreadyRec_L} and t.ContractAlreadyRec <= #{contractAlreadyRec_H} ]]></if>
+            <if test="contractAlreadyRec_Enum != null">
+                and t.ContractAlreadyRec in
+                <foreach collection="contractAlreadyRec_Enum" item="item" open="(" separator="," close=")">#{item}
+                </foreach>
+            </if>
+            <if test="contractNotYetRec != null">and t.ContractNotYetRec = #{contractNotYetRec}</if>
+            <if test="contractNotYetRec_L != null">
+                <![CDATA[ and t.ContractNotYetRec >= #{contractNotYetRec_L} and t.ContractNotYetRec <= #{contractNotYetRec_H} ]]></if>
+            <if test="contractNotYetRec_Enum != null">
+                and t.ContractNotYetRec in
+                <foreach collection="contractNotYetRec_Enum" item="item" open="(" separator="," close=")">#{item}
+                </foreach>
+            </if>
+            <if test="contractParentCode != null">
+                <if test="contractParentCode == ''">
+                    and (t.ContractParentCode is null or t.ContractParentCode = '')
+                </if>
+                <if test="contractParentCode != ''">
+                    and t.ContractParentCode like #{contractParentCode}
+                </if>
+            </if>
+            <if test="contractParentCode_Enum != null">
+                and t.ContractParentCode in
+                <foreach collection="contractParentCode_Enum" item="item" open="(" separator="," close=")">#{item}
+                </foreach>
+            </if>
+            <if test="contractCreateTime != null">and t.ContractCreateTime = #{contractCreateTime}</if>
+            <if test="contractCreateTime_S != null">
+                <![CDATA[ and t.ContractCreateTime > #{contractCreateTime_S} and t.ContractCreateTime < #{contractCreateTime_E} ]]></if>
+            <if test="contractSignTime != null">and t.ContractSignTime = #{contractSignTime}</if>
+            <if test="contractSignTime_S != null">
+                <![CDATA[ and t.ContractSignTime > #{contractSignTime_S} and t.ContractSignTime < #{contractSignTime_E} ]]></if>
+            <if test="contractEndTime != null">and t.ContractEndTime = #{contractEndTime}</if>
+            <if test="contractEndTime_S != null">
+                <![CDATA[ and t.ContractEndTime > #{contractEndTime_S} and t.ContractEndTime < #{contractEndTime_E} ]]></if>
+            <if test="contractEffectTime != null">and t.ContractEffectTime = #{contractEffectTime}</if>
+            <if test="contractEffectTime_S != null">
+                <![CDATA[ and t.ContractEffectTime > #{contractEffectTime_S} and t.ContractEffectTime < #{contractEffectTime_E} ]]></if>
+            <if test="contractNoEffectTime != null">and t.ContractNoEffectTime = #{contractNoEffectTime}</if>
+            <if test="contractNoEffectTime_S != null">
+                <![CDATA[ and t.ContractNoEffectTime > #{contractNoEffectTime_S} and t.ContractNoEffectTime < #{contractNoEffectTime_E} ]]></if>
+            <if test="contractRemark != null">
+                <if test="contractRemark == ''">
+                    and (t.ContractRemark is null or t.ContractRemark = '')
+                </if>
+                <if test="contractRemark != ''">
+                    and t.ContractRemark like #{contractRemark}
+                </if>
+            </if>
+            <if test="contractRemark_Enum != null">
+                and t.ContractRemark in
+                <foreach collection="contractRemark_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="invoiceList != null">and t.InvoiceList like #{invoiceList}</if>
+            <if test="receivableList != null">and t.ReceivableList like #{receivableList}</if>
+            <if test="phaseList != null">and t.PhaseList like #{phaseList}</if>
+            <if test="invoiceApplyList != null">and t.InvoiceApplyList like #{invoiceApplyList}</if>
+            <if test="_default_mulattr != null">
+                and (
+                <foreach collection="_default_mulattr" item="item" separator=" or ">
+                    <if test="item.name == 'contractCode'">t.ContractCode like #{item.value}</if>
+                    <if test="item.name == 'projectCode'">t.ProjectCode like #{item.value}</if>
+                    <if test="item.name == 'contractName'">t.ContractName like #{item.value}</if>
+                    <if test="item.name == 'contractStatus'">t.ContractStatus = #{item.value}</if>
+                    <if test="item.name == 'contractType'">t.ContractType like #{item.value}</if>
+                    <if test="item.name == 'partyA'">t.PartyA like #{item.value}</if>
+                    <if test="item.name == 'partyB'">t.PartyB like #{item.value}</if>
+                    <if test="item.name == 'partyC'">t.PartyC like #{item.value}</if>
+                    <if test="item.name == 'contractAmount'">t.ContractAmount = #{item.value}</if>
+                    <if test="item.name == 'contractAlreadyRec'">t.ContractAlreadyRec = #{item.value}</if>
+                    <if test="item.name == 'contractNotYetRec'">t.ContractNotYetRec = #{item.value}</if>
+                    <if test="item.name == 'contractParentCode'">t.ContractParentCode like #{item.value}</if>
+                    <if test="item.name == 'contractCreateTime'">t.ContractCreateTime = #{item.value}</if>
+                    <if test="item.name == 'contractSignTime'">t.ContractSignTime = #{item.value}</if>
+                    <if test="item.name == 'contractEndTime'">t.ContractEndTime = #{item.value}</if>
+                    <if test="item.name == 'contractEffectTime'">t.ContractEffectTime = #{item.value}</if>
+                    <if test="item.name == 'contractNoEffectTime'">t.ContractNoEffectTime = #{item.value}</if>
+                    <if test="item.name == 'contractRemark'">t.ContractRemark like #{item.value}</if>
+                    <if test="item.name == 'invoiceList'">t.InvoiceList like #{item.value}</if>
+                    <if test="item.name == 'receivableList'">t.ReceivableList like #{item.value}</if>
+                    <if test="item.name == 'phaseList'">t.PhaseList like #{item.value}</if>
+                    <if test="item.name == 'invoiceApplyList'">t.InvoiceApplyList like #{item.value}</if>
+                </foreach>
+                )
+            </if>
+        </trim>
+    </sql>
+
+    <sql id="contractOrderSql">
+        <trim prefix="ORDER BY" suffixOverrides=",">
+            <if test="_orderBys != null">
+                <foreach collection="_orderBys" item="item" open="" separator="," close="">
+                    <if test="item == 'contractCode'">t.ContractCode</if>
+                    <if test="item == 'contractCode_D'">t.ContractCode desc</if>
+                    <if test="item == 'contractAmount'">t.ContractAmount</if>
+                    <if test="item == 'contractAmount_D'">t.ContractAmount desc</if>
+                    <if test="item == 'contractAlreadyRec'">t.ContractAlreadyRec</if>
+                    <if test="item == 'contractAlreadyRec_D'">t.ContractAlreadyRec desc</if>
+                    <if test="item == 'contractNotYetRec'">t.ContractNotYetRec</if>
+                    <if test="item == 'contractNotYetRec_D'">t.ContractNotYetRec desc</if>
+                    <if test="item == 'contractCreateTime'">t.ContractCreateTime</if>
+                    <if test="item == 'contractCreateTime_D'">t.ContractCreateTime desc</if>
+                </foreach>
+            </if>
+        </trim>
+    </sql>
+
+    <insert id="insertContract" parameterType="com.pengesoft.crmsystem.domain.entity.Contract">
+        insert into Contract(
+            ContractCode,
+            ProjectCode,
+            ContractName,
+            ContractStatus,
+            ContractType,
+            PartyA,
+            PartyB,
+            PartyC,
+            ContractAmount,
+            ContractAlreadyRec,
+            ContractNotYetRec,
+            ContractParentCode,
+            ContractCreateTime,
+            ContractSignTime,
+            ContractEndTime,
+            ContractEffectTime,
+            ContractNoEffectTime,
+            ContractRemark,
+            InvoiceList,
+            ReceivableList,
+            PhaseList,
+            InvoiceApplyList
+        )values(
+            #{contractCode,jdbcType=VARCHAR},
+            #{projectCode,jdbcType=VARCHAR},
+            #{contractName,jdbcType=VARCHAR},
+            #{contractStatus,jdbcType=INTEGER},
+            #{contractType,jdbcType=VARCHAR},
+            #{partyA,jdbcType=VARCHAR},
+            #{partyB,jdbcType=VARCHAR},
+            #{partyC,jdbcType=VARCHAR},
+            #{contractAmount,jdbcType=DOUBLE},
+            #{contractAlreadyRec,jdbcType=DOUBLE},
+            #{contractNotYetRec,jdbcType=DOUBLE},
+            #{contractParentCode,jdbcType=VARCHAR},
+            #{contractCreateTime,jdbcType=TIMESTAMP},
+            #{contractSignTime,jdbcType=TIMESTAMP},
+            #{contractEndTime,jdbcType=TIMESTAMP},
+            #{contractEffectTime,jdbcType=TIMESTAMP},
+            #{contractNoEffectTime,jdbcType=TIMESTAMP},
+            #{contractRemark,jdbcType=VARCHAR},
+            #{invoiceList.jsonText,jdbcType=VARCHAR},
+            #{receivableList.jsonText,jdbcType=VARCHAR},
+            #{phaseList.jsonText,jdbcType=VARCHAR},
+            #{invoiceApplyList.jsonText,jdbcType=VARCHAR}
+        )
+    </insert>
+
+    <update id="updateContract" parameterType="com.pengesoft.crmsystem.domain.entity.Contract">
+        update Contract set
+            ProjectCode = #{projectCode,jdbcType=VARCHAR},
+            ContractName = #{contractName,jdbcType=VARCHAR},
+            ContractStatus = #{contractStatus,jdbcType=INTEGER},
+            ContractType = #{contractType,jdbcType=VARCHAR},
+            PartyA = #{partyA,jdbcType=VARCHAR},
+            PartyB = #{partyB,jdbcType=VARCHAR},
+            PartyC = #{partyC,jdbcType=VARCHAR},
+            ContractAmount = #{contractAmount,jdbcType=DOUBLE},
+            ContractAlreadyRec = #{contractAlreadyRec,jdbcType=DOUBLE},
+            ContractNotYetRec = #{contractNotYetRec,jdbcType=DOUBLE},
+            ContractParentCode = #{contractParentCode,jdbcType=VARCHAR},
+            ContractCreateTime = #{contractCreateTime,jdbcType=TIMESTAMP},
+            ContractSignTime = #{contractSignTime,jdbcType=TIMESTAMP},
+            ContractEndTime = #{contractEndTime,jdbcType=TIMESTAMP},
+            ContractEffectTime = #{contractEffectTime,jdbcType=TIMESTAMP},
+            ContractNoEffectTime = #{contractNoEffectTime,jdbcType=TIMESTAMP},
+            ContractRemark = #{contractRemark,jdbcType=VARCHAR},
+            InvoiceList = #{invoiceList.jsonText,jdbcType=VARCHAR},
+            ReceivableList = #{receivableList.jsonText,jdbcType=VARCHAR},
+            PhaseList = #{phaseList.jsonText,jdbcType=VARCHAR},
+            InvoiceApplyList = #{invoiceApplyList.jsonText,jdbcType=VARCHAR}
+        where ContractCode=#{contractCode,jdbcType=VARCHAR}
+    </update>
+
+    <delete id="deleteContract" parameterType="com.pengesoft.crmsystem.domain.entity.Contract">
+        delete from Contract where ContractCode=#{contractCode,jdbcType=VARCHAR}
+    </delete>
+
+
+    <select id="getBaseContract" parameterType="com.pengesoft.crmsystem.domain.entity.Contract"
+            resultMap="contractResultMap">
+        select
+        <include refid="contractBaseCol"/>
+        from Contract t where t.ContractCode=#{contractCode,jdbcType=VARCHAR}
+    </select>
+
+    <select id="getContract" parameterType="com.pengesoft.crmsystem.domain.entity.Contract"
+            resultMap="contractResultMap">
+        select t.* from Contract t where t.ContractCode=#{contractCode,jdbcType=VARCHAR}
+    </select>
+
+    <select id="queryContractCount" parameterType="java.util.Map" resultType="int">
+        select count(*) from Contract t
+        <include refid="contractWhereSql"/>
+    </select>
+
+    <select id="queryBaseContractList" parameterType="java.util.Map" resultMap="contractResultMap">
+        select
+        <include refid="contractBaseCol"/>
+        from Contract t
+        <include refid="contractWhereSql"/>
+        <include refid="contractOrderSql"/>
+    </select>
+
+    <select id="queryContractList" parameterType="java.util.Map" resultMap="contractResultMap">
+        select t.* from Contract t
+        <include refid="contractWhereSql"/>
+        <include refid="contractOrderSql"/>
+    </select>
+
+
+    <update id="updateContractByContractCode" parameterType="com.pengesoft.crmsystem.domain.entity.Contract">
+        update Contract set ProjectCode =#{projectCode}, ContractName = #{contractName},  ContractType = #{contractType}, PartyA = #{partyA}, PartyB = #{partyB}, PartyC = #{partyC}, ContractAmount = #{contractAmount},  ContractParentCode = #{contractParentCode}, ContractCreateTime = #{contractCreateTime}, ContractSignTime = #{contractSignTime}, ContractEndTime = #{contractEndTime}, ContractEffectTime = #{contractEffectTime}, ContractNoEffectTime = #{contractNoEffectTime}, ContractRemark = #{contractRemark} where ContractCode=#{contractCode}
+    </update>
+    <update id="updateContractStatus" parameterType="java.lang.String">
+        update Contract set ContractStatus = 1  where ContractCode = '${_parameter}'
+    </update>
+
+    <select id="queryProjectContractWithInvoiceApply" resultMap="projectContractRetResultMap">
+        select<include refid="contractBaseCol"/>,
+        <include refid="projectSimpleDetail"/>
+        from Contract t left join Project_tb p on t.ProjectCode = p.ProjectCode where t.InvoiceApplyList is not null
+    </select>
+    <select id="queryContractProject" resultMap="projectContractRetResultMap">
+        select<include refid="contractBaseCol"/>,
+        <include refid="projectSimpleDetail"/>
+        from Contract t left join Project_tb p on t.ProjectCode = p.ProjectCode
+    </select>
+
+    <select id="queryContractProjectSortNum1" resultMap="projectContractRetResultMap">
+        select<include refid="contractBaseCol"/>,
+        <include refid="projectSimpleDetail"/>
+        from Contract t left join Project_tb p on t.ProjectCode = p.ProjectCode order by t.ContractSignTime desc
+    </select>
+    <select id="queryContractProjectSortNum2" resultMap="projectContractRetResultMap">
+        select<include refid="contractBaseCol"/>,
+        <include refid="projectSimpleDetail"/>
+        from Contract t left join Project_tb p on t.ProjectCode = p.ProjectCodeorder order by t.ContractSignTime asc
+    </select>
+    <select id="queryContractProjectSortNum3" resultMap="projectContractRetResultMap">
+        select<include refid="contractBaseCol"/>,
+        <include refid="projectSimpleDetail"/>
+        from Contract t left join Project_tb p on t.ProjectCode = p.ProjectCode order by t.ContractAmount desc
+    </select>
+    <select id="queryContractProjectSortNum4" resultMap="projectContractRetResultMap">
+        select<include refid="contractBaseCol"/>,
+        <include refid="projectSimpleDetail"/>
+        from Contract t left join Project_tb p on t.ProjectCode = p.ProjectCode order by t.ContractAmount asc
+    </select>
+    <select id="queryOwnContractProjectBySearchConditionForSeller" parameterType="java.util.HashMap"
+            resultMap="projectContractRetResultMap">
+
+        select *from (select          t.ContractCode,t.ProjectCode,t.ContractName,t.ContractStatus,t.ContractType,t.PartyA,t.PartyB,t.PartyC,t.ContractAmount,t.ContractAlreadyRec,t.ContractNotYetRec,t.ContractParentCode,t.ContractCreateTime,t.ContractSignTime,t.ContractEndTime,t.ContractEffectTime,t.ContractNoEffectTime,t.ContractRemark,t.InvoiceList,t.ReceivableList,t.PhaseList,t.InvoiceApplyList      ,           p.ProjectName,p.UserId           from( select * from Contract contract where contract.ProjectCode is not null and contract.PhaseList is not null ) t ,(select * from Project_tb         project where project.UserId=#{UniqID}) p where t.ProjectCode = p.ProjectCode ) t3  <where>
+
+        <if test='SearchCondition!=null '>
+            (
+            t3.ContractCode like '%${SearchCondition}%'
+            or t3.ContractName like '%${SearchCondition}%'
+            or t3.ContractType like '%${SearchCondition}%'
+            or t3.PartyA like '%${SearchCondition}%'
+            or t3.PartyB like '%${SearchCondition}%'
+            or t3.PartyC like '%${SearchCondition}%'
+            or t3.ContractParentCode like '%${SearchCondition}%'
+            or t3.ContractRemark like '%${SearchCondition}%'
+            or t3.ProjectName like '%${SearchCondition}%'
+            )
+        </if>
+
+    </where>
+
+    </select>
+    <select id="queryContractProjectOption1" resultMap="projectContractRetResultHashMapOption1">
+        select<include refid="projectSimpleDetail"/>,
+        <include refid="contractSimpleDetail"/>
+        from Contract c inner join Project_tb p on c.ProjectCode = p.ProjectCode
+    </select>
+
+    <select id="queryContractProjectOption2" resultMap="projectContractRetResultHashMapOption2">
+        select<include refid="projectSimpleDetail"/>,
+        <include refid="contractMoreDetail"/>
+        from Contract c left join Project_tb p on c.ProjectCode = p.ProjectCode
+    </select>
+
+    <select id="queryContractProjectOption3" resultMap="projectContractRetResultMap">
+        select<include refid="contractBaseCol"/>,
+        <include refid="projectSimpleDetail"/>,u.name
+        from Contract t left join Project_tb p on t.ProjectCode = p.ProjectCode join (SELECT a.uniqid,a.name from
+        Acc_Persons a) u on u.uniqid = p.UserId
+    </select>
+    <!---->
+    <!--<select id="queryContractProject" resultMap="projectContractRetResultMap">-->
+    <!--SELECT u.UserName,o.* from (SELECT k.CustName,d.* from (SELECT p.ProjectName,p.UserId, p.ProjectStatus, p.CustId,p.ProjectPLevel,c.* from Contract c left join Project_tb p on c.ProjectCode = p.ProjectCode) d  INNER JOIN Customer_tb k  on k.CustId=d.CustId ) o INNER JOIN UserInfo u on u.UserId= o.UserId-->
+    <!--</select>-->
+    <select id="queryContractProjectByProjectCode" parameterType="java.lang.String"
+            resultMap="projectContractRetResultMap">
+        select<include refid="contractBaseCol"/>,
+        <include refid="projectSimpleDetail"/>
+        from Contract t ,Project_tb p where t.ProjectCode='${_parameter}' and p.ProjectCode='${_parameter}'
+    </select>
+    <select id="queryContractProjectByProjectCodeForSeller" parameterType="java.util.HashMap"
+            resultMap="projectContractRetResultMap">
+        select<include refid="contractBaseCol"/>,
+        <include refid="projectSimpleDetail"/>
+        from Contract t ,Project_tb p where t.ProjectCode='${ProjectCode}'and p.ProjectCode='${ProjectCode}'and p.UserId=${UserId}
+    </select>
+    <select id="queryContractProjectByProjectCodeOption1" parameterType="java.lang.String"
+            resultMap="projectContractRetResultHashMapOption1">
+        select<include refid="projectSimpleDetail"/>,
+        <include refid="contractSimpleDetail"/>
+        from Contract c ,Project_tb p where c.ProjectCode='${_parameter}' and p.ProjectCode='${_parameter}'
+    </select>
+
+    <select id="queryContractProjectByProjectCodeOption2" parameterType="java.lang.String"
+            resultMap="projectContractRetResultHashMapOption2">
+        select<include refid="projectSimpleDetail"/>,
+        <include refid="contractMoreDetail"/>from Contract t ,Project_tb p where c.ProjectCode='${_parameter}' and
+        p.ProjectCode='${_parameter}'
+    </select>
+
+
+
+    <select id="queryProjectContractForApp" parameterType="java.lang.String"
+            resultMap="projectContractRetResultMap">
+
+        select<include refid="contractBaseCol"/>,
+        <include refid="projectSimpleDetail"/>
+        from( select * from Contract contract where contract.ProjectCode is not null ) t ,(select * from Project_tb
+        project where project.UserId=#{UserId}) p where t.ProjectCode = p.ProjectCode
+    </select>
+
+    <select id="queryProjectContractForAppCase3" parameterType="java.lang.String"
+            resultMap="projectContractRetResultMap">
+
+        select<include refid="contractBaseCol"/>,
+        <include refid="projectSimpleDetail"/>
+        from( select * from Contract contract where contract.ProjectCode is not null and contract.PhaseList is not null and contract.ContractStatus !=1) t ,(select * from Project_tb
+        project where project.UserId=#{UserId}) p where t.ProjectCode = p.ProjectCode
+    </select>
+    <select id="queryProjectContractForAppSortNum1" parameterType="java.lang.String"
+            resultMap="projectContractRetResultMap">
+
+        select<include refid="contractBaseCol"/>,
+        <include refid="projectSimpleDetail"/>
+        from( select * from Contract contract where contract.ProjectCode is not null ) t ,(select * from Project_tb
+        project where project.UserId=#{UserId}) p where t.ProjectCode = p.ProjectCode order by t.ContractSignTime desc
+    </select>
+
+    <select id="queryProjectContractForAppSortNum2" parameterType="java.lang.String"
+            resultMap="projectContractRetResultMap">
+
+        select<include refid="contractBaseCol"/>,
+        <include refid="projectSimpleDetail"/>
+        from( select * from Contract contract where contract.ProjectCode is not null ) t ,(select * from Project_tb
+        project where project.UserId=#{UserId}) p where t.ProjectCode = p.ProjectCode order by t.ContractSignTime asc
+    </select>
+
+    <select id="queryProjectContractForAppSortNum3" parameterType="java.lang.String"
+            resultMap="projectContractRetResultMap">
+
+        select<include refid="contractBaseCol"/>,
+        <include refid="projectSimpleDetail"/>
+        from( select * from Contract contract where contract.ProjectCode is not null ) t ,(select * from Project_tb
+        project where project.UserId=#{UserId}) p where t.ProjectCode = p.ProjectCode order by t.ContractAmount desc
+    </select>
+
+    <select id="queryProjectContractForAppSortNum4" parameterType="java.lang.String"
+            resultMap="projectContractRetResultMap">
+
+        select<include refid="contractBaseCol"/>,
+        <include refid="projectSimpleDetail"/>
+        from( select * from Contract contract where contract.ProjectCode is not null ) t ,(select * from Project_tb
+        project where project.UserId=#{UserId}) p where t.ProjectCode = p.ProjectCode order by t.ContractAmount asc
+    </select>
+
+    <select id="queryProjectContractForAppOption1" parameterType="java.lang.String"
+            resultMap="projectContractRetResultHashMapOption1">
+        select<include refid="contractSimpleDetail"/>,
+        <include refid="projectSimpleDetail"/>
+        from( select * from Contract contract where contract.ProjectCode is not null ) t ,(select * from Project_tb
+        project where project.UserId=#{UserId}) p where t.ProjectCode = p.ProjectCode
+    </select>
+
+    <select id="queryProjectContractForAppOption2" parameterType="java.lang.String"
+            resultMap="projectContractRetResultHashMapOption2">
+        select<include refid="contractMoreDetail"/>,
+        <include refid="projectSimpleDetail"/>
+        from( select * from Contract contract where contract.ProjectCode is not null ) t ,(select * from Project_tb
+        project where project.UserId=#{UserId}) p where t.ProjectCode = p.ProjectCode
+
+    </select>
+    <select id="queryContractProjectBySearchCondition" parameterType="java.util.Map"
+            resultMap="projectContractRetResultMap">
+
+
+        SELECT * from (SELECT t1.*,t2.ProjectName from(select t.* from Contract t ) t1,(select
+        p.ProjectCode,p.ProjectName from Project_tb p ) t2 where t1.ProjectCode = t2.ProjectCode)t3
+
+        <where>
+            <if test='SearchCondition!=null '>
+                (
+                t3.ContractCode like '%${SearchCondition}%'
+                or t3.ContractName like '%${SearchCondition}%'
+                or t3.ContractType like '%${SearchCondition}%'
+                or t3.PartyA like '%${SearchCondition}%'
+                or t3.PartyB like '%${SearchCondition}%'
+                or t3.PartyC like '%${SearchCondition}%'
+                or t3.ContractParentCode like '%${SearchCondition}%'
+                or t3.ContractRemark like '%${SearchCondition}%'
+                or t3.ProjectName like '%${SearchCondition}%'
+                )
+            </if>
+
+            <if test='ContractStartTime!=null '>
+
+                <if test='ContractEndTime!=null '>
+                    and (
+                    t3.ContractCreateTime between '${ContractStartTime}' and '${ContractEndTime}'
+                    or t3.ContractSignTime between '${ContractStartTime}' and '${ContractEndTime}'
+                    or t3.ContractEndTime between '${ContractStartTime}' and '${ContractEndTime}'
+                    or t3.ContractEffectTime between '${ContractStartTime}' and '${ContractEndTime}'
+                    or t3.ContractNoEffectTime between '${ContractStartTime}' and '${ContractEndTime}'
+
+                    )
+                </if>
+
+                <if test='ContractEndTime==null '>
+                    and (
+                    t3.ContractCreateTime &gt;='${ContractStartTime}'
+                    or t3.ContractSignTime &gt;= '${ContractStartTime}'
+                    or t3.ContractEndTime &gt;= '${ContractStartTime}'
+                    or t3.ContractEffectTime &gt;='${ContractStartTime}'
+                    or t3.ContractNoEffectTime &gt;= '${ContractStartTime}'
+                    )
+                </if>
+
+            </if>
+
+            <if test='ContractEndTime!=null '>
+
+                <if test='ContractStartTime!=null '>
+                    and (
+                    t3.ContractCreateTime between '${ContractStartTime}' and '${ContractEndTime}'
+                    or t3.ContractSignTime between '${ContractStartTime}' and '${ContractEndTime}'
+                    or t3.ContractEndTime between '${ContractStartTime}' and '${ContractEndTime}'
+                    or t3.ContractEffectTime between '${ContractStartTime}' and '${ContractEndTime}'
+                    or t3.ContractNoEffectTime between '${ContractStartTime}' and '${ContractEndTime}'
+                    )
+                </if>
+                <if test='ContractStartTime==null '>
+                    and (
+                    t3.ContractCreateTime &lt;= '${ContractEndTime}'
+                    or t3.ContractSignTime &lt;='${ContractEndTime}'
+                    or t3.ContractEndTime &lt;= '${ContractEndTime}'
+                    or t3.ContractEffectTime &lt;= '${ContractEndTime}'
+                    or t3.ContractNoEffectTime &lt;= '${ContractEndTime}'
+                    )
+                </if>
+
+            </if>
+
+        </where>
+    </select>
+    <select id="queryOwnContractProjectBySearchCondition" parameterType="java.util.Map"
+            resultMap="projectContractRetResultMap">
+        SELECT * from (SELECT t1.*,t2.ProjectName from(select t.* from Contract t ) t1,(select
+        p.ProjectCode,p.ProjectName,p.UserId from Project_tb p where p.UserId = #{UniqID}) t2 where t1.ProjectCode =
+        t2.ProjectCode )t3
+
+
+        <where>
+
+            <if test='SearchCondition!=null '>
+                (
+                t3.ContractCode like '%${SearchCondition}%'
+                or t3.ContractName like '%${SearchCondition}%'
+                or t3.ContractType like '%${SearchCondition}%'
+                or t3.PartyA like '%${SearchCondition}%'
+                or t3.PartyB like '%${SearchCondition}%'
+                or t3.PartyC like '%${SearchCondition}%'
+
+                or t3.ContractParentCode like '%${SearchCondition}%'
+                or t3.ContractRemark like '%${SearchCondition}%'
+                or t3.ProjectName like '%${SearchCondition}%'
+                )
+            </if>
+
+
+        </where>
+    </select>
+
+
+    <select id="queryContractNameBySearchCondition" parameterType="java.util.Map"
+            resultMap="projectContractRetResultMap">
+        SELECT * from (SELECT t1.*,t2.ProjectName from(select t.* from Contract t ) t1,(select
+        p.ProjectCode,p.ProjectName,p.UserId from Project_tb p ) t2 where t1.ProjectCode =
+        t2.ProjectCode )t3
+        <where>
+            <if test='SearchCondition!=null '>
+                ( t3.ContractName like '%${SearchCondition}%')
+            </if>
+        </where>
+    </select>
+
+    <delete id="batchDeleteContractByContractCode">
+        delete from Contract where 1=1
+        <foreach collection="array" item="ContractCode" open="and " separator="or">
+            ContractCode='${ContractCode}'
+        </foreach>
+    </delete>
+
+    <select id="queryContractByYearAndStatus" parameterType="int" resultMap="contractResultMap">
+    SELECT * from Contract c where  c.ContractStatus= '0' and year(c.ContractSignTime )=#{QueryYear}
+    </select>
+
+    <select id="queryContractByStatus" parameterType="int" resultMap="contractResultMap">
+    SELECT * from Contract c where  c.ContractStatus= '0'
+    </select>
+    <select id="queryAllReceivableColumn" parameterType="java.lang.String" resultType="int">
+select count(*) from Contract c where  ContractCode=#{ContractCode} and  c.ReceivableList is not null
+    </select>
+
+
+    <select id="queryContractDetail" parameterType="java.lang.String" resultMap="projectContractRetResultMap">
+        SELECT p.ProjectName,p.UserId, p.ProjectStatus, p.CustId,p.ProjectPLevel,
+        <include refid="contractBaseCol"/>
+        from Contract t left join Project_tb p on t.ProjectCode = p.ProjectCode where t.ContractCode = #{ContractCode}
+    </select>
+    <select id="queryReceivableColumn" parameterType="java.lang.String" resultType="int">
+select count(*) from Contract c where  ContractCode=#{ContractCode} and  c.ReceivableList is not null
+    </select>
+
+    <select id="queryInvoiceColumn" parameterType="java.lang.String" resultType="int">
+select count(*) from Contract c where  ContractCode=#{ContractCode} and  c.InvoiceList is not null
+    </select>
+    <select id="queryPhaseColumn" parameterType="java.lang.String" resultType="int">
+select count(*) from Contract c where  ContractCode=#{ContractCode} and  c.PhaseList is not null
+    </select>
+
+    <select id="queryContractWithoutPhase" parameterType="java.lang.String" resultMap="projectContractRetResultMap">
+SELECT p.ProjectName,p.UserId, p.ProjectStatus, p.CustId,p.ProjectPLevel,c.* from Contract c left join Project_tb p on c.ProjectCode = p.ProjectCode where c.PhaseList is null
+    </select>
+    <select id="queryContractWithoutPhaseForSeller" parameterType="java.lang.String"
+            resultMap="projectContractRetResultMap">
+SELECT p.ProjectName,p.UserId, p.ProjectStatus, p.CustId,p.ProjectPLevel,c.* from Contract c left join Project_tb p on c.ProjectCode = p.ProjectCode where c.PhaseList is null
+    </select>
+    <select id="queryContractsWithRecNoInv" resultMap="projectContractRetResultMap">
+SELECT p.ProjectName,p.UserId, p.ProjectStatus, p.CustId,p.ProjectPLevel,c.* from Contract c left join Project_tb p on c.ProjectCode = p.ProjectCode where c.ReceivableList is not null
+    </select>
+    <select id="queryContractWithInvNoRec" resultMap="projectContractRetResultMap">
+SELECT p.ProjectName,p.UserId, p.ProjectStatus, p.CustId,p.ProjectPLevel,c.* from Contract c left join Project_tb p on c.ProjectCode = p.ProjectCode where c.InvoiceList is not null
+    </select>
+    <select id="queryContractWithPhase" parameterType="java.lang.String" resultMap="projectContractRetResultMap">
+SELECT pcr.*,person.Name from (SELECT p.ProjectName,p.UserId, p.ProjectStatus, p.CustId,p.ProjectPLevel,c.* from Contract c inner join Project_tb p on c.ProjectCode = p.ProjectCode where c.PhaseList is not null ) pcr join Acc_Persons person on pcr.UserId = person.UniqID
+   </select>
+    <select id="queryContractWithPhaseForSeller" parameterType="java.lang.String"
+            resultMap="projectContractRetResultMap">
+SELECT pcr.*,person.Name from (SELECT p.ProjectName,p.UserId, p.ProjectStatus, p.CustId,p.ProjectPLevel,c.* from Contract c inner join Project_tb p on c.ProjectCode = p.ProjectCode where c.PhaseList is not null and p.UserId = #{UserId}) pcr join Acc_Persons person on pcr.UserId = person.UniqID
+ </select>
+    <select id="queryContractListByProjectCodeOp0" parameterType="java.lang.String" resultMap="contractResultMap">
+        select t.* from Contract t where t.ProjectCode=#{ProjectCode}
+    </select>
+
+    <select id="queryContractProjectForApply" parameterType="java.lang.String" resultMap="projectContractRetResultMap">
+        select<include refid="contractBaseCol"/>,
+        <include refid="projectSimpleDetail"/>
+        from Contract t left join Project_tb p on t.ProjectCode = p.ProjectCode where t.ContractCode = #{ContractCode}
+    </select>
+</mapper>

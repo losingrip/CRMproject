@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+    用户的MyBatis映射文件.
+    作者：余展鹏.
+    创建时间：2020/4/1 17:37:31.
+    文件由鹏业软件模型工具生成(模板名称：JavaMyBatisMap),一般不应直接修改此文件.
+    Copyright (C) 2008 - 鹏业软件公司
+-->
+
+<mapper namespace="com.pengesoft.crmsystem.domain.dao.UserDao">
+
+    <resultMap type="com.pengesoft.crmsystem.domain.entity.User" id="userResultMap">
+        <id property="userId" column="UserId" />
+        <result property="userName" column="UserName" />
+        <result property="password" column="Password" />
+    </resultMap>
+
+    <sql id="userBaseCol">
+        t.UserId,t.UserName,t.Password
+    </sql>
+
+    <sql id="userWhereSql">
+        <trim prefix="WHERE" prefixOverrides="and |or ">
+            <if test="userId != null">
+                <if test="userId == ''">
+                    and (t.UserId is null or t.UserId = '')
+                </if>
+                <if test="userId != ''">
+                    and t.UserId like #{userId}
+                </if>
+            </if>
+            <if test="userId_Enum != null">
+                and t.UserId in
+                <foreach collection="userId_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="userName != null">
+                <if test="userName == ''">
+                    and (t.UserName is null or t.UserName = '')
+                </if>
+                <if test="userName != ''">
+                    and t.UserName like #{userName}
+                </if>
+            </if>
+            <if test="userName_Enum != null">
+                and t.UserName in
+                <foreach collection="userName_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="password != null">
+                <if test="password == ''">
+                    and (t.Password is null or t.Password = '')
+                </if>
+                <if test="password != ''">
+                    and t.Password like #{password}
+                </if>
+            </if>
+            <if test="password_Enum != null">
+                and t.Password in
+                <foreach collection="password_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="_default_mulattr != null">
+                and (
+                <foreach collection="_default_mulattr" item="item" separator=" or ">
+                    <if test="item.name == 'userId'">t.UserId like #{item.value}</if>
+                    <if test="item.name == 'userName'">t.UserName like #{item.value}</if>
+                    <if test="item.name == 'password'">t.Password like #{item.value}</if>
+                </foreach>
+                )
+            </if>
+        </trim>
+    </sql>
+
+    <sql id="userOrderSql">
+        <trim prefix="ORDER BY" suffixOverrides=",">
+            <if test="_orderBys != null">
+                <foreach collection="_orderBys" item="item" open="" separator="," close="">
+                    <if test="item == 'userId'">t.UserId</if>
+                    <if test="item == 'userId_D'">t.UserId desc</if>
+                </foreach>
+            </if>
+        </trim>
+    </sql>
+
+    <insert id="insertUser" parameterType="com.pengesoft.crmsystem.domain.entity.User">
+        insert into UserInfo(
+            UserId,
+            UserName,
+            Password
+        )values(
+            #{userId,jdbcType=VARCHAR},
+            #{userName,jdbcType=VARCHAR},
+            #{password,jdbcType=VARCHAR}
+        )
+    </insert>
+
+    <update id="updateUser" parameterType="com.pengesoft.crmsystem.domain.entity.User">
+        update UserInfo set
+            UserName = #{userName,jdbcType=VARCHAR},
+            Password = #{password,jdbcType=VARCHAR}
+        where UserId=#{userId,jdbcType=VARCHAR}
+    </update>
+
+    <delete id="deleteUser" parameterType="com.pengesoft.crmsystem.domain.entity.User">
+        delete from UserInfo where UserId=#{userId,jdbcType=VARCHAR}
+    </delete>
+
+
+    <select id="getBaseUser" parameterType="com.pengesoft.crmsystem.domain.entity.User" resultMap="userResultMap">
+        select
+        <include refid="userBaseCol" />
+        from UserInfo t where t.UserId=#{userId,jdbcType=VARCHAR}
+    </select>
+
+    <select id="getUser" parameterType="com.pengesoft.crmsystem.domain.entity.User" resultMap="userResultMap">
+        select t.* from UserInfo t where t.UserId=#{userId,jdbcType=VARCHAR}
+    </select>
+
+    <select id="queryUserCount" parameterType="java.util.Map" resultType="int">
+        select count(*) from UserInfo t
+        <include refid="userWhereSql" />
+    </select>
+
+    <select id="queryBaseUserList" parameterType="java.util.Map" resultMap="userResultMap">
+        select
+        <include refid="userBaseCol" />
+        from UserInfo t
+        <include refid="userWhereSql" />
+        <include refid="userOrderSql" />
+    </select>
+
+    <select id="queryUserList" parameterType="java.util.Map" resultMap="userResultMap">
+        select t.* from UserInfo t
+        <include refid="userWhereSql" />
+        <include refid="userOrderSql" />
+    </select>
+</mapper>

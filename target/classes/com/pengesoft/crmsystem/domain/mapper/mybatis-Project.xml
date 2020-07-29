@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+    项目信息的MyBatis映射文件.
+    作者：司童.
+    创建时间：2020/3/31 16:29:57.
+    文件由鹏业软件模型工具生成(模板名称：JavaMyBatisMap),一般不应直接修改此文件.
+    Copyright (C) 2008 - 鹏业软件公司
+-->
+
+<mapper namespace="com.pengesoft.crmsystem.domain.dao.ProjectDao">
+
+    <resultMap type="com.pengesoft.crmsystem.domain.entity.Project" id="projectResultMap">
+        <id property="projectCode" column="ProjectCode" />
+        <result property="projectName" column="ProjectName" />
+        <result property="projectDescribe" column="ProjectDescribe" />
+        <result property="projectPLevel" column="ProjectPLevel" />
+        <result property="projectType" column="ProjectType" />
+        <result property="userId" column="UserId" />
+        <result property="projectStatus" column="ProjectStatus" />
+        <result property="projectCreateTime" column="ProjectCreateTime" />
+        <result property="projectUpdateTime" column="ProjectUpdateTime" />
+        <result property="projectRemark" column="ProjectRemark" />
+        <result property="custId" column="CustId" />
+        <result property="contactName" column="ContactName" />
+        <result property="contactTel" column="ContactTel" />
+        <result property="contactDuty" column="ContactDuty" />
+        <result property="contactHistory" column="ContactHistory" />
+    </resultMap>
+
+<!--    项目部分信息的返回-->
+    <resultMap type="java.util.HashMap" id="simpleResultMap">
+        <id property="ProjectCode" column="ProjectCode" />
+        <result property="ProjectName" column="ProjectName" />
+        <result property="UserId" column="UserId" />
+        <result property="CustId" column="CustId" />
+        <result property="ContactName" column="ContactName" />
+        <result property="ContactTel" column="ContactTel" />
+    </resultMap>
+
+    <resultMap type="java.util.HashMap" id="projectSampleResultMap">
+        <id property="ProjectCode" column="ProjectCode" />
+        <result property="ProjectName" column="ProjectName" />
+        <result property="ProjectCreateTime" column="ProjectCreateTime" />
+    </resultMap>
+
+    <resultMap type="java.util.HashMap" id="levelCountMap"  >
+        <result column="name" property="key" jdbcType="INTEGER" />
+        <result column="value" property="value" jdbcType="INTEGER" />
+    </resultMap>
+
+    <sql id="projectSimpleCol">
+        t.ProjectCode,t.ProjectName,t.ProjectPLevel,t.ProjectType,t.UserId,t.CustId,t.ProjectCreateTime,t.ContactName,t.ContactTel,t.ContactDuty,t.ProjectStatus
+    </sql>
+
+    <sql id="projectBaseCol">
+        t.ProjectCode,t.ProjectName,t.ProjectDescribe,t.ProjectPLevel,t.ProjectType,t.UserId,t.ProjectStatus,t.ProjectCreateTime,t.ProjectUpdateTime,t.ProjectRemark,t.CustId,t.ContactName,t.ContactTel,t.ContactDuty,t.ContactHistory
+    </sql>
+
+    <sql id="projectWhereSql">
+        <trim prefix="WHERE" prefixOverrides="and |or ">
+            <if test="projectCode != null">
+                <if test="projectCode == ''">
+                    and (t.ProjectCode is null or t.ProjectCode = '')
+                </if>
+                <if test="projectCode != ''">
+                    and t.ProjectCode like #{projectCode}
+                </if>
+            </if>
+            <if test="projectCode_Enum != null">
+                and t.ProjectCode in
+                <foreach collection="projectCode_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="projectName != null">
+                <if test="projectName == ''">
+                    and (t.ProjectName is null or t.ProjectName = '')
+                </if>
+                <if test="projectName != ''">
+                    and t.ProjectName like #{projectName}
+                </if>
+            </if>
+            <if test="projectName_Enum != null">
+                and t.ProjectName in
+                <foreach collection="projectName_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="projectDescribe != null">
+                <if test="projectDescribe == ''">
+                    and (t.ProjectDescribe is null or t.ProjectDescribe = '')
+                </if>
+                <if test="projectDescribe != ''">
+                    and t.ProjectDescribe like #{projectDescribe}
+                </if>
+            </if>
+            <if test="projectDescribe_Enum != null">
+                and t.ProjectDescribe in
+                <foreach collection="projectDescribe_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="projectPLevel != null">and t.ProjectPLevel = #{projectPLevel}</if>
+            <if test="projectPLevel_L != null"><![CDATA[ and t.ProjectPLevel >= #{projectPLevel_L} and t.ProjectPLevel <= #{projectPLevel_H} ]]></if>
+            <if test="projectPLevel_Enum != null">
+                and t.ProjectPLevel in
+                <foreach collection="projectPLevel_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="projectType != null">and t.ProjectType = #{projectType}</if>
+            <if test="projectType_L != null"><![CDATA[ and t.ProjectType >= #{projectType_L} and t.ProjectType <= #{projectType_H} ]]></if>
+            <if test="projectType_Enum != null">
+                and t.ProjectType in
+                <foreach collection="projectType_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="userId != null">
+                <if test="userId == ''">
+                    and (t.UserId is null or t.UserId = '')
+                </if>
+                <if test="userId != ''">
+                    and t.UserId like #{userId}
+                </if>
+            </if>
+            <if test="userId_Enum != null">
+                and t.UserId in
+                <foreach collection="userId_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="projectStatus != null">and t.ProjectStatus = #{projectStatus}</if>
+            <if test="projectStatus_L != null"><![CDATA[ and t.ProjectStatus >= #{projectStatus_L} and t.ProjectStatus <= #{projectStatus_H} ]]></if>
+            <if test="projectStatus_Enum != null">
+                and t.ProjectStatus in
+                <foreach collection="projectStatus_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="projectCreateTime != null">and t.ProjectCreateTime = #{projectCreateTime}</if>
+            <if test="projectCreateTime_S != null"><![CDATA[ and t.ProjectCreateTime > #{projectCreateTime_S} and t.ProjectCreateTime < #{projectCreateTime_E} ]]></if>
+            <if test="projectUpdateTime != null">and t.ProjectUpdateTime = #{projectUpdateTime}</if>
+            <if test="projectUpdateTime_S != null"><![CDATA[ and t.ProjectUpdateTime > #{projectUpdateTime_S} and t.ProjectUpdateTime < #{projectUpdateTime_E} ]]></if>
+            <if test="custId != null">and t.CustId = #{custId}</if>
+            <if test="custId_L != null"><![CDATA[ and t.CustId >= #{custId_L} and t.CustId <= #{custId_H} ]]></if>
+            <if test="custId_Enum != null">
+                and t.CustId in
+                <foreach collection="custId_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="contactName != null">
+                <if test="contactName == ''">
+                    and (t.ContactName is null or t.ContactName = '')
+                </if>
+                <if test="contactName != ''">
+                    and t.ContactName like #{contactName}
+                </if>
+            </if>
+            <if test="contactName_Enum != null">
+                and t.ContactName in
+                <foreach collection="contactName_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="contactTel != null">
+                <if test="contactTel == ''">
+                    and (t.ContactTel is null or t.ContactTel = '')
+                </if>
+                <if test="contactTel != ''">
+                    and t.ContactTel like #{contactTel}
+                </if>
+            </if>
+            <if test="contactTel_Enum != null">
+                and t.ContactTel in
+                <foreach collection="contactTel_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="contactDuty != null">
+                <if test="contactDuty == ''">
+                    and (t.ContactDuty is null or t.ContactDuty = '')
+                </if>
+                <if test="contactDuty != ''">
+                    and t.ContactDuty like #{contactDuty}
+                </if>
+            </if>
+            <if test="contactDuty_Enum != null">
+                and t.ContactDuty in
+                <foreach collection="contactDuty_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="contactHistory != null">
+                <if test="contactHistory == ''">
+                    and (t.ContactHistory is null or t.ContactHistory = '')
+                </if>
+                <if test="contactHistory != ''">
+                    and t.ContactHistory like #{contactHistory}
+                </if>
+            </if>
+            <if test="contactHistory_Enum != null">
+                and t.ContactHistory in
+                <foreach collection="contactHistory_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="_default_mulattr != null">
+                and (
+                <foreach collection="_default_mulattr" item="item" separator=" or ">
+                    <if test="item.name == 'projectCode'">t.ProjectCode like #{item.value}</if>
+                    <if test="item.name == 'projectName'">t.ProjectName like #{item.value}</if>
+                    <if test="item.name == 'projectDescribe'">t.ProjectDescribe like #{item.value}</if>
+                    <if test="item.name == 'projectPLevel'">t.ProjectPLevel = #{item.value}</if>
+                    <if test="item.name == 'projectType'">t.ProjectType = #{item.value}</if>
+                    <if test="item.name == 'userId'">t.UserId like #{item.value}</if>
+                    <if test="item.name == 'projectStatus'">t.ProjectStatus = #{item.value}</if>
+                    <if test="item.name == 'projectCreateTime'">t.ProjectCreateTime = #{item.value}</if>
+                    <if test="item.name == 'projectUpdateTime'">t.ProjectUpdateTime = #{item.value}</if>
+                    <if test="item.name == 'custId'">t.CustId = #{item.value}</if>
+                    <if test="item.name == 'contactName'">t.ContactName like #{item.value}</if>
+                    <if test="item.name == 'contactTel'">t.ContactTel like #{item.value}</if>
+                    <if test="item.name == 'contactDuty'">t.ContactDuty like #{item.value}</if>
+                    <if test="item.name == 'contactHistory'">t.ContactHistory like #{item.value}</if>
+                </foreach>
+                )
+            </if>
+        </trim>
+    </sql>
+
+    <sql id="projectOrderSql">
+        <trim prefix="ORDER BY" suffixOverrides=",">
+            <if test="_orderBys != null">
+                <foreach collection="_orderBys" item="item" open="" separator="," close="">
+                    <if test="item == 'projectCode'">t.ProjectCode</if>
+                    <if test="item == 'projectCode_D'">t.ProjectCode desc</if>
+                    <if test="item == 'projectName'">t.ProjectName</if>
+                    <if test="item == 'projectName_D'">t.ProjectName desc</if>
+                    <if test="item == 'projectDescribe'">t.ProjectDescribe</if>
+                    <if test="item == 'projectDescribe_D'">t.ProjectDescribe desc</if>
+                    <if test="item == 'projectPLevel'">t.ProjectPLevel</if>
+                    <if test="item == 'projectPLevel_D'">t.ProjectPLevel desc</if>
+                    <if test="item == 'projectType'">t.ProjectType</if>
+                    <if test="item == 'projectType_D'">t.ProjectType desc</if>
+                    <if test="item == 'userId'">t.UserId</if>
+                    <if test="item == 'userId_D'">t.UserId desc</if>
+                    <if test="item == 'projectStatus'">t.ProjectStatus</if>
+                    <if test="item == 'projectStatus_D'">t.ProjectStatus desc</if>
+                    <if test="item == 'projectCreateTime'">t.ProjectCreateTime</if>
+                    <if test="item == 'projectCreateTime_D'">t.ProjectCreateTime desc</if>
+                    <if test="item == 'projectUpdateTime'">t.ProjectUpdateTime</if>
+                    <if test="item == 'projectUpdateTime_D'">t.ProjectUpdateTime desc</if>
+                    <if test="item == 'custId'">t.CustId</if>
+                    <if test="item == 'custId_D'">t.CustId desc</if>
+                    <if test="item == 'contactName'">t.ContactName</if>
+                    <if test="item == 'contactName_D'">t.ContactName desc</if>
+                    <if test="item == 'contactTel'">t.ContactTel</if>
+                    <if test="item == 'contactTel_D'">t.ContactTel desc</if>
+                </foreach>
+            </if>
+        </trim>
+    </sql>
+
+    <insert id="insertProject" parameterType="com.pengesoft.crmsystem.domain.entity.Project">
+        insert into Project_tb(
+            ProjectCode,
+            ProjectName,
+            ProjectDescribe,
+            ProjectPLevel,
+            ProjectType,
+            UserId,
+            ProjectStatus,
+            ProjectCreateTime,
+            ProjectUpdateTime,
+            ProjectRemark,
+            CustId,
+            ContactName,
+            ContactTel,
+            ContactDuty,
+            ContactHistory
+        )values(
+            #{projectCode,jdbcType=VARCHAR},
+            #{projectName,jdbcType=VARCHAR},
+            #{projectDescribe,jdbcType=VARCHAR},
+            #{projectPLevel,jdbcType=INTEGER},
+            #{projectType,jdbcType=INTEGER},
+            #{userId,jdbcType=VARCHAR},
+            #{projectStatus,jdbcType=INTEGER},
+            #{projectCreateTime,jdbcType=TIMESTAMP},
+            #{projectUpdateTime,jdbcType=TIMESTAMP},
+            #{projectRemark,jdbcType=VARCHAR},
+            #{custId,jdbcType=INTEGER},
+            #{contactName,jdbcType=VARCHAR},
+            #{contactTel,jdbcType=VARCHAR},
+            #{contactDuty,jdbcType=VARCHAR},
+            #{contactHistory,jdbcType=VARCHAR}
+        )
+    </insert>
+
+    <update id="updateProject" parameterType="com.pengesoft.crmsystem.domain.entity.Project">
+        update Project_tb set
+            ProjectName = #{projectName,jdbcType=VARCHAR},
+            ProjectDescribe = #{projectDescribe,jdbcType=VARCHAR},
+            ProjectPLevel = #{projectPLevel,jdbcType=INTEGER},
+            ProjectType = #{projectType,jdbcType=INTEGER},
+            UserId = #{userId,jdbcType=VARCHAR},
+            ProjectStatus = #{projectStatus,jdbcType=INTEGER},
+            ProjectCreateTime = #{projectCreateTime,jdbcType=TIMESTAMP},
+            ProjectUpdateTime = #{projectUpdateTime,jdbcType=TIMESTAMP},
+            ProjectRemark = #{projectRemark,jdbcType=VARCHAR},
+            CustId = #{custId,jdbcType=INTEGER},
+            ContactName = #{contactName,jdbcType=VARCHAR},
+            ContactTel = #{contactTel,jdbcType=VARCHAR},
+            ContactDuty = #{contactDuty,jdbcType=VARCHAR},
+            ContactHistory = #{contactHistory,jdbcType=VARCHAR}
+        where ProjectCode=#{projectCode,jdbcType=VARCHAR}
+    </update>
+
+
+    <!--更新项目基本信息-->
+    <update id="updateByPart" parameterType="com.pengesoft.crmsystem.domain.entity.Project">
+        update Project_tb
+        <set>
+            <if test="projectName != null and projectName != ''">
+                ProjectName = #{projectName,jdbcType=VARCHAR},
+            </if>
+            <if test="projectDescribe != null and projectDescribe != ''">
+                ProjectDescribe = #{projectDescribe,jdbcType=VARCHAR},
+            </if>
+            <if test="projectType != null and projectType != '' and projectType != 0">
+                ProjectType = #{projectType,jdbcType=INTEGER},
+            </if>
+            <if test="projectRemark != null and projectRemark != ''">
+                ProjectRemark = #{projectRemark,jdbcType=VARCHAR},
+            </if>
+            <if test="contactName != null and contactName != ''">
+                ContactName = #{contactName,jdbcType=VARCHAR},
+            </if>
+            <if test="contactTel != null and contactTel != ''">
+                ContactTel = #{contactTel,jdbcType=VARCHAR},
+            </if>
+            <if test="contactDuty != null and contactDuty != ''">
+                ContactDuty = #{contactDuty,jdbcType=VARCHAR},
+            </if>
+            <if test="contactHistory != null and contactHistory != ''">
+                ContactHistory = #{contactHistory,jdbcType=VARCHAR},
+            </if>
+            <if test="projectPLevel != null">
+                ProjectPLevel = #{projectPLevel,jdbcType=INTEGER},
+            </if>
+            <if test="userId != null and userId != ''">
+                UserId = #{userId,jdbcType=VARCHAR},
+            </if>
+            <if test="custId != null and custId != ''">
+                CustId = #{custId,jdbcType=INTEGER},
+            </if>
+            <if test="projectStatus != null">
+                ProjectStatus = #{projectStatus,jdbcType=INTEGER},
+            </if>
+            <if test="projectUpdateTime != null">
+                ProjectUpdateTime = #{projectUpdateTime,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where ProjectCode = #{projectCode,jdbcType=VARCHAR}
+    </update>
+
+
+    <delete id="deleteProject" parameterType="com.pengesoft.crmsystem.domain.entity.Project">
+        delete from Project_tb where ProjectCode=#{projectCode,jdbcType=VARCHAR}
+    </delete>
+
+
+    <select id="getBaseProject" parameterType="com.pengesoft.crmsystem.domain.entity.Project" resultMap="projectResultMap">
+        select
+        <include refid="projectBaseCol" />
+        from Project_tb t where t.ProjectCode=#{projectCode,jdbcType=VARCHAR}
+    </select>
+
+    <select id="getProject" parameterType="com.pengesoft.crmsystem.domain.entity.Project" resultMap="projectResultMap">
+        select t.* from Project_tb t where t.ProjectCode=#{projectCode,jdbcType=VARCHAR}
+    </select>
+
+    <select id="queryProjectCount" parameterType="java.util.Map" resultType="int">
+        select count(*) from Project_tb t
+        <include refid="projectWhereSql" />
+    </select>
+
+    <select id="queryBaseProjectList" parameterType="java.util.Map" resultMap="projectResultMap">
+        select
+        <include refid="projectBaseCol" />
+        from Project_tb t
+        <include refid="projectWhereSql" />
+        <include refid="projectOrderSql" />
+    </select>
+
+    <select id="queryProjectList" parameterType="java.util.Map" resultMap="projectResultMap">
+        select t.* from Project_tb t
+        <include refid="projectWhereSql" />
+        <include refid="projectOrderSql" />
+    </select>
+
+
+    <!--判断项目名是否存在-->
+    <select id="projectNameIsOrExist" parameterType="com.pengesoft.crmsystem.domain.entity.Project" resultType="com.pengesoft.crmsystem.domain.entity.Project">
+        select t.* from Project_tb t where t.ProjectName=#{projectName,jdbcType=VARCHAR}
+    </select>
+
+    <!--销售获取项目列表 默认以时间排序-->
+    <select id="getProjectListByTime"  parameterType="com.pengesoft.crmsystem.domain.entity.Project" resultMap="projectResultMap">
+        select
+        <include refid="projectBaseCol" />,ap.Name,c.CustName as CustomerName
+        from Project_tb t
+        join Customer_tb c on c.CustId=t.CustId
+        join Acc_Persons ap on ap.UniqID=t.UserId
+        where t.UserId=#{userId,jdbcType=VARCHAR} order by t.ProjectCreateTime desc
+    </select>
+
+    <!--销售获取项目列表 以项目总金额排序-->
+    <select id="getProjectListByMoney" parameterType="com.pengesoft.crmsystem.domain.entity.Project" resultMap="projectResultMap">
+        select p.*,c1.ProjectTotal as ContractTotal,ap.Name,c.CustName as CustomerName from
+        (select p.ProjectCode as ProjectCode,sum(c.ContractAmount) as ProjectTotal
+        from Project_tb p left join Contract c on p.ProjectCode=c.ProjectCode
+        group by p.ProjectCode) c1
+        join Project_tb p on c1.ProjectCode=p.ProjectCode
+		join Customer_tb c on c.CustId=p.CustId
+        join Acc_Persons ap on ap.UniqID=p.UserId
+		where p.UserId='4'
+		order by c1.ProjectTotal desc
+    </select>
+
+
+    <!-- 表联查  获取项目名称 客户名称 联系人 联系电话 销售人员名字 拜访时间-->
+    <select id="getRecentVisitList" parameterType="java.util.HashMap" resultMap="simpleResultMap">
+        select t.ProjectCode,t.ProjectName,ap.UniqID,t.ContactName,t.ContactTel,t.CustId,v.VisitPlanTime,v.VisitId,c.CustName as CustomerName,ap.Name
+        from Project_tb t
+        join Visit_tb v on t.ProjectCode=v.ProjectCode
+        join Customer_tb c on c.CustId=t.CustId
+        join Acc_Persons ap on ap.UniqID=t.UserId where v.VisitFactTime is null and t.UserId=#{UserId} and t.ProjectStatus=0 and
+        <if test="startTime != null and endTime != null">
+            v.VisitPlanTime &lt;= #{endTime}
+        </if>
+        order by v.VisitPlanTime desc
+    </select>
+
+
+    <!--获取销售主管负责的销售的最近拜访-->
+    <select id="getSaleRecentVisitList" parameterType="java.util.HashMap" resultMap="projectResultMap">
+        select t.ProjectCode,t.ProjectName,ap.UniqID as UserId,t.ContactName,t.ContactTel,t.CustId,v.VisitPlanTime,v.VisitId,c.CustName as CustomerName,ap.Name
+        from Project_tb t
+        join Visit_tb v on t.ProjectCode=v.ProjectCode
+        join Customer_tb c on c.CustId=t.CustId
+        join Acc_Persons ap on ap.UniqID=t.UserId where  v.VisitFactTime is null and t.ProjectStatus=0 and
+        <if test="startTime != null and endTime != null">
+            v.VisitPlanTime &lt;= #{endTime} and
+        </if>
+        <foreach collection="personList" item="pengesoft.account.Person" open="(" close=")" separator="or">
+            t.UserId=#{pengesoft.account.Person.uniqID,jdbcType=VARCHAR}
+        </foreach>
+        order by v.VisitPlanTime desc
+    </select>
+
+
+
+    <!--app首页拜访计划进入项目详情-->
+    <select id="getAppProjectDetail"  resultMap="simpleResultMap">
+        select t.ProjectCode,t.ProjectName,t.UserId,t.ContactName,t.ContactTel,ap.Name
+        from Project_tb t
+        join Acc_Persons ap on ap.UniqID=t.UserId
+        where t.ProjectCode=#{projectCode,jdbcType=VARCHAR}
+
+    </select>
+
+
+    <!--pc端项目详情-->
+    <select id="getProjectDetail" parameterType="com.pengesoft.crmsystem.domain.entity.Project" resultMap="projectResultMap">
+        select t.*,ap.Name,c.CustName as CustomerName
+        from Project_tb t
+        join Acc_Persons ap on ap.UniqID=t.UserId
+        join Customer_tb c on t.CustId=c.CustId
+        where t.ProjectCode=#{projectCode,jdbcType=VARCHAR}
+
+    </select>
+
+
+    <!--销售获取自己的项目表  待完善-->
+    <select id="getProjectByUser"  resultMap="projectSampleResultMap">
+        select t.ProjectCode,t.ProjectName,t.ProjectCreateTime,c.CustId,c.CustName as CustomerName
+        from Project_tb t
+        join Customer_tb c on t.CustId=c.CustId
+        where t.UserId=#{userId,jdbcType=VARCHAR}
+    </select>
+
+
+    <select id="getProjectByUserId" parameterType="int" resultMap="projectSampleResultMap">
+        select t.ProjectCode,t.ProjectName,t.ProjectCreateTime,ap.Name,c.CustName as CustomerName
+        from Project_tb t
+        join Acc_Persons ap on t.UserId=ap.UniqID
+        join Customer_tb c on t.CustId=c.CustId
+        where t.UserId=#{UserId,jdbcType=VARCHAR}
+    </select>
+
+
+    <!--查询项目合同总额-->
+    <select id="getContractAmountByProjectCode" parameterType="java.lang.String" resultType="double">
+        select sum(c.ContractAmount) from Contract c where c.ProjectCode=#{projectCode,jdbcType=VARCHAR}
+    </select>
+
+
+    <!--查询销售总管下面项目的p级数量-->
+    <select id="getPlevelNumber" parameterType="java.lang.String" resultType="java.util.HashMap">
+        select count(t.ProjectPLevel) as value ,t.ProjectPLevel as name
+        from Project_tb t where t.UserId=#{userId,jdbcType=VARCHAR} group by (t.ProjectPLevel)
+    </select>
+
+
+    <!--pc主管添加合同时模糊查询项目名-->
+    <select id="getProjectListByLikeProjectName" parameterType="java.util.HashMap" resultMap="projectResultMap">
+        select
+        p.ProjectName,p.ProjectCreateTime,p.ProjectPLevel
+        from Project_tb p
+        where 1=1
+        <foreach collection="plevelMap" item="pengesoft.account.Person" open="and (" close=")" separator="or">
+            p.UserId=#{pengesoft.account.Person.uniqID,jdbcType=VARCHAR}
+        </foreach>
+        <if test="StrField!=null and StrField!=''">
+            and p.ProjectName like '%${StrField}%'
+        </if>
+        order by p.ProjectCreateTime desc
+    </select>
+
+
+
+    <!--模糊查询项目信息-->
+    <select id="getProjectListByLike" parameterType="java.util.HashMap" resultMap="projectResultMap">
+        select
+        <include refid="projectBaseCol" />,ap.Name,c.CustName as CustomerName
+        from Project_tb t
+        join Customer_tb c on c.CustId=t.CustId
+        join Acc_Persons ap on ap.UniqID=t.UserId
+        where t.UserId=#{UserId,jdbcType=VARCHAR}
+        <if test="StrField!=null and StrField!=''">
+            and (t.ProjectName like '%${StrField}%'or t.ProjectType like '%${StrField}%'
+            or t.ContactName like '%${StrField}%' or t.ContactTel like '%${StrField}%'
+            or t.ContactDuty like '%${StrField}%' or ap.Name like '%${StrField}%'
+            or t.ProjectStatus like '%${StrField}%' or c.CustName like '%${StrField}%')
+        </if>
+        order by t.ProjectCreateTime desc
+    </select>
+
+
+    <select id="queryProjectNumByYear" parameterType="int" resultMap="projectResultMap">
+    SELECT * from Project_tb p where  year(p.ProjectCreateTime)=#{QueryYear2}
+    </select>
+
+    <select id="queryProjectNum" parameterType="int" resultMap="projectResultMap">
+    SELECT * from Project_tb p
+    </select>
+
+    <!--pc主管模糊查询已经关注的项目信息-->
+    <select id="getAttentionProjectListByLike" parameterType="java.util.HashMap" resultMap="projectResultMap">
+        select
+        <include refid="projectBaseCol" />,ap.Name,c.CustName as CustomerName,a.AttentionId
+        from Project_tb t
+        join Customer_tb c on c.CustId=t.CustId
+        join Acc_Persons ap on ap.UniqID=t.UserId
+        join Attention_tb a on a.ProjectCode=t.ProjectCode
+        where a.UserId=#{UserId,jdbcType=VARCHAR}
+        <if test="StrField!=null and StrField!=''">
+            and (t.ProjectName like '%${StrField}%'or t.ProjectType like '%${StrField}%'
+            or t.ContactName like '%${StrField}%' or t.ContactTel like '%${StrField}%'
+            or t.ContactDuty like '%${StrField}%' or ap.Name like '%${StrField}%'
+            or t.ProjectStatus like '%${StrField}%' or c.CustName like '%${StrField}%')
+        </if>
+        order by t.ProjectCreateTime desc
+    </select>
+
+
+
+    <!--app端销售主管首页统计plevel-->
+    <select id="customerPlevel" parameterType="java.util.HashMap" resultType="java.util.HashMap">
+
+        select count(p.ProjectPLevel) as value,p.ProjectPLevel as name
+        from Project_tb p
+        where 1=1 and
+        <foreach collection="plevelMap" item="pengesoft.account.Person" open="(" close=")" separator="or">
+            p.UserId=#{pengesoft.account.Person.uniqID,jdbcType=VARCHAR}
+        </foreach>
+        group by p.ProjectPLevel
+    </select>
+
+    <!--pc端销售主管首页获取所有的项目列表-->
+    <select id="allProjectList" parameterType="java.util.HashMap" resultMap="projectResultMap">
+
+        select p.*,ap.Name,c.CustName as CustomerName
+        from Project_tb p join Acc_Persons ap on p.UserId=ap.UniqID
+        join Customer_tb c on p.CustId=c.CustId
+        where 1=1
+        <foreach collection="plevelMap" item="pengesoft.account.Person" open="and (" close=")" separator="or">
+            p.UserId=#{pengesoft.account.Person.uniqID,jdbcType=VARCHAR}
+        </foreach>
+        order by p.ProjectCreateTime desc
+    </select>
+
+
+    <!--pc端模糊查询-->
+    <select id="getAllProjectListLike" parameterType="java.util.HashMap" resultMap="projectResultMap">
+
+        select p.*,ap.Name,c.CustName as CustomerName
+        from Project_tb p join Acc_Persons ap on p.UserId=ap.UniqID
+        join Customer_tb c on p.CustId=c.CustId
+        where 1=1
+        <foreach collection="plevelMap" item="pengesoft.account.Person" open="and (" close=")" separator="or">
+            p.UserId=#{pengesoft.account.Person.uniqID,jdbcType=VARCHAR}
+        </foreach>
+        <if test="StrField!=null and StrField!=''">
+            and (p.ProjectName like '%${StrField}%'or p.ProjectType like '%${StrField}%'
+            or p.ContactName like '%${StrField}%' or p.ContactTel like '%${StrField}%'
+            or p.ContactDuty like '%${StrField}%' or ap.Name like '%${StrField}%'
+            or p.ProjectStatus like '%${StrField}%' or c.CustName like '%${StrField}%')
+        </if>
+        order by p.ProjectCreateTime desc
+    </select>
+
+
+
+    <!--pc端销售主管查看三个月内没有拜访记录的项目-->
+    <select id="longTimeNotHaveVisit" parameterType="java.util.HashMap" resultMap="projectResultMap">
+
+        select p.*,ap.name,c.CustName as CustomerName from Project_tb p left join Visit_tb v on p.ProjectCode=v.ProjectCode
+        join Acc_Persons ap on p.UserId=ap.UniqID
+        join Customer_tb c on p.CustId=c.CustId
+        where v.ProjectCode is null
+        and p.ProjectCreateTime &lt;= #{endTime} and p.ProjectStatus!=0
+        <foreach collection="personList" item="pengesoft.account.Person" open="and (" close=")" separator="or">
+            p.UserId=#{pengesoft.account.Person.uniqID,jdbcType=VARCHAR}
+        </foreach>
+        order by p.ProjectCreateTime
+    </select>
+
+    <!--<select id="longTimeNotHaveVisit" parameterType="java.util.HashMap" resultMap="projectResultMap">-->
+
+        <!--select p.*,a.attentionId,ap.name,c.CustName from Project_tb p left join Visit_tb v on p.ProjectCode=v.ProjectCode-->
+        <!--left join Attention_tb a on a.ProjectCode=p.ProjectCode-->
+        <!--join Acc_Persons ap on p.UserId=ap.UniqID-->
+        <!--join Customer_tb c on p.CustId=c.CustId-->
+        <!--where v.ProjectCode is null-->
+        <!--and p.ProjectCreateTime &lt;= #{endTime} and p.ProjectStatus!=2-->
+        <!--<foreach collection="personList" item="pengesoft.account.Person" open="and (" close=")" separator="or">-->
+            <!--p.UserId=#{pengesoft.account.Person.uniqID,jdbcType=VARCHAR}-->
+        <!--</foreach>-->
+        <!--order by p.ProjectCreateTime-->
+    <!--</select>-->
+
+
+    <!--pc端销售主管查看三个月内拜访计划和记录没更新的项目-->
+    <!--<select id="longTimeNotHaveVisit1" parameterType="java.util.HashMap" resultMap="projectResultMap">-->
+        <!--select v1.ProjectCode,v1.VisitFactTime,p.ProjectName from-->
+        <!--(select v.ProjectCode,max(v.VisitFactTime) as VisitFactTime-->
+        <!--from Project_tb p join Visit_tb v on p.ProjectCode=v.ProjectCode-->
+        <!--where v.VisitFactTime is not null group by v.ProjectCode) v1-->
+        <!--join Project_tb p on v1.ProjectCode=p.ProjectCode-->
+        <!--where v1.VisitFactTime &lt;= #{endTime}-->
+    <!--</select>-->
+
+    <!--pc端销售主管三个月没有拜访计划和拜访记录的项目code-->
+    <select id="longTimeNotHaveVisitProjectCode" parameterType="java.util.HashMap" resultType="java.lang.String">
+        select v1.ProjectCode from
+        (select v.ProjectCode,max(v.VisitFactTime) as VisitFactTime ,max(v.VisitPlanTime) as VisitPlanTime
+        from Project_tb p join Visit_tb v on p.ProjectCode=v.ProjectCode
+        group by v.ProjectCode) v1
+        join Project_tb p on v1.ProjectCode=p.ProjectCode
+        where p.ProjectStatus!=0 and ((v1.VisitFactTime is not null and v1.VisitFactTime &lt;= #{endTime}) or (v1.VisitFactTime is null and v1.VisitPlanTime &lt;=#{endTime}))
+        <foreach collection="personList" item="pengesoft.account.Person" open="and (" close=")" separator="or">
+            p.UserId=#{pengesoft.account.Person.uniqID,jdbcType=VARCHAR}
+        </foreach>
+    </select>
+
+
+
+    <select id="longTimeNotHaveVisit1" parameterType="java.util.HashMap" resultMap="projectResultMap">
+        select p.*,ap.name,c.CustName as CustomerName from Project_tb p
+        join Acc_Persons ap on p.UserId=ap.UniqID
+        join Customer_tb c on p.CustId=c.CustId
+        where 1=1 and p.ProjectStatus!=0
+        <foreach collection="projectCodeList" item="projectCode" open="and (" close=")" separator="or">
+            p.ProjectCode=#{projectCode,jdbcType=VARCHAR}
+        </foreach>
+    </select>
+
+
+
+
+
+    <!--<select id="longTimeNotHaveVisit1" parameterType="java.util.HashMap" resultMap="projectResultMap">-->
+        <!--select p.*,a.attentionId,ap.name,c.CustName from Project_tb p-->
+        <!--left join Attention_tb a on a.ProjectCode=p.ProjectCode-->
+        <!--join Acc_Persons ap on p.UserId=ap.UniqID-->
+        <!--join Customer_tb c on p.CustId=c.CustId-->
+        <!--where 1=1-->
+        <!--<foreach collection="projec*9tCodeList" item="projectCode" open="and (" close=")" separator="or">-->
+            <!--p.ProjectCode=#{projectCode,jdbcType=VARCHAR}-->
+        <!--</foreach>-->
+    <!--</select>-->
+
+</mapper>

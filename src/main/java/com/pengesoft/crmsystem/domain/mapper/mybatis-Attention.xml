@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+    关注项目表的MyBatis映射文件.
+    作者：司童.
+    创建时间：2020/4/8 16:14:47.
+    文件由鹏业软件模型工具生成(模板名称：JavaMyBatisMap),一般不应直接修改此文件.
+    Copyright (C) 2008 - 鹏业软件公司
+-->
+
+<mapper namespace="com.pengesoft.crmsystem.domain.dao.AttentionDao">
+
+    <resultMap type="com.pengesoft.crmsystem.domain.entity.Attention" id="attentionResultMap">
+        <id property="attentionId" column="AttentionId" />
+        <result property="userId" column="UserId" />
+        <result property="projectCode" column="ProjectCode" />
+    </resultMap>
+
+    <!--<resultMap type="java.util.HashMap" id="projectSampleResultMap">-->
+        <!--<result property="projectName" column="ProjectName" jdbcType="String" />-->
+        <!--<result property="projectCreateTime" column="ProjectCreateTime" />-->
+        <!--<result property="projectCode" column="projectCode" />-->
+        <!--<result property="custName" column="custName" />-->
+    <!--</resultMap>-->
+
+    <sql id="attentionBaseCol">
+        t.AttentionId,t.UserId,t.ProjectCode
+    </sql>
+
+    <sql id="attentionWhereSql">
+        <trim prefix="WHERE" prefixOverrides="and |or ">
+            <if test="attentionId != null">and t.AttentionId = #{attentionId}</if>
+            <if test="attentionId_L != null"><![CDATA[ and t.AttentionId >= #{attentionId_L} and t.AttentionId <= #{attentionId_H} ]]></if>
+            <if test="attentionId_Enum != null">
+                and t.AttentionId in
+                <foreach collection="attentionId_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="userId != null">
+                <if test="userId == ''">
+                    and (t.UserId is null or t.UserId = '')
+                </if>
+                <if test="userId != ''">
+                    and t.UserId like #{userId}
+                </if>
+            </if>
+            <if test="userId_Enum != null">
+                and t.UserId in
+                <foreach collection="userId_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="projectCode != null">
+                <if test="projectCode == ''">
+                    and (t.ProjectCode is null or t.ProjectCode = '')
+                </if>
+                <if test="projectCode != ''">
+                    and t.ProjectCode like #{projectCode}
+                </if>
+            </if>
+            <if test="projectCode_Enum != null">
+                and t.ProjectCode in
+                <foreach collection="projectCode_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="_default_mulattr != null">
+                and (
+                <foreach collection="_default_mulattr" item="item" separator=" or ">
+                    <if test="item.name == 'attentionId'">t.AttentionId = #{item.value}</if>
+                    <if test="item.name == 'userId'">t.UserId like #{item.value}</if>
+                    <if test="item.name == 'projectCode'">t.ProjectCode like #{item.value}</if>
+                </foreach>
+                )
+            </if>
+        </trim>
+    </sql>
+
+    <sql id="attentionOrderSql">
+        <trim prefix="ORDER BY" suffixOverrides=",">
+            <if test="_orderBys != null">
+                <foreach collection="_orderBys" item="item" open="" separator="," close="">
+                    <if test="item == 'attentionId'">t.AttentionId</if>
+                    <if test="item == 'attentionId_D'">t.AttentionId desc</if>
+                    <if test="item == 'userId'">t.UserId</if>
+                    <if test="item == 'userId_D'">t.UserId desc</if>
+                    <if test="item == 'projectCode'">t.ProjectCode</if>
+                    <if test="item == 'projectCode_D'">t.ProjectCode desc</if>
+                </foreach>
+            </if>
+        </trim>
+    </sql>
+
+    <insert id="insertAttention" parameterType="com.pengesoft.crmsystem.domain.entity.Attention">
+        insert into Attention_tb(
+
+            UserId,
+            ProjectCode
+        )values(
+
+            #{userId,jdbcType=VARCHAR},
+            #{projectCode,jdbcType=VARCHAR}
+        )
+    </insert>
+
+    <update id="updateAttention" parameterType="com.pengesoft.crmsystem.domain.entity.Attention">
+        update Attention_tb set
+            UserId = #{userId,jdbcType=VARCHAR},
+            ProjectCode = #{projectCode,jdbcType=VARCHAR}
+        where AttentionId=#{attentionId,jdbcType=INTEGER}
+    </update>
+
+    <delete id="deleteAttention" parameterType="com.pengesoft.crmsystem.domain.entity.Attention">
+        delete from Attention_tb where AttentionId=#{attentionId,jdbcType=INTEGER}
+    </delete>
+
+
+    <select id="getBaseAttention" parameterType="com.pengesoft.crmsystem.domain.entity.Attention" resultMap="attentionResultMap">
+        select
+        <include refid="attentionBaseCol" />
+        from Attention_tb t where t.AttentionId=#{attentionId,jdbcType=INTEGER}
+    </select>
+
+    <select id="getAttention" parameterType="com.pengesoft.crmsystem.domain.entity.Attention" resultMap="attentionResultMap">
+        select t.* from Attention_tb t where t.AttentionId=#{attentionId,jdbcType=INTEGER}
+    </select>
+
+    <select id="queryAttentionCount" parameterType="java.util.Map" resultType="int">
+        select count(*) from Attention_tb t
+        <include refid="attentionWhereSql" />
+    </select>
+
+    <select id="queryBaseAttentionList" parameterType="java.util.Map" resultMap="attentionResultMap">
+        select
+        <include refid="attentionBaseCol" />
+        from Attention_tb t
+        <include refid="attentionWhereSql" />
+        <include refid="attentionOrderSql" />
+    </select>
+
+    <select id="queryAttentionList" parameterType="java.util.Map" resultMap="attentionResultMap">
+        select t.* from Attention_tb t
+        <include refid="attentionWhereSql" />
+        <include refid="attentionOrderSql" />
+    </select>
+
+    <!--暂时是销售和销售主管通用   获取自己的关注项目-->
+    <select id="getAttentionByUserId" parameterType="java.lang.String" resultType="map">
+        select t.ProjectCode,t.ProjectName,t.ProjectCreateTime,t.ProjectRemark,t.ProjectDescribe,t.ProjectType,t.ContactDuty,t.ProjectStatus,t.ProjectPLevel,t.ContactName,t.ContactTel,c.CustName,a.AttentionId,ap.UniqID as UserId,ap.Name
+        from Attention_tb a
+        join Project_tb t on t.ProjectCode=a.ProjectCode
+        join Customer_tb c on t.CustId=c.CustId
+		join Acc_Persons ap on a.UserId=ap.UniqID
+        where a.UserId=#{UserId,jdbcType=VARCHAR}
+        order by t.ProjectCreateTime desc
+    </select>
+
+
+    <!--查询是否关注-->
+    <select id="isAttention" parameterType="com.pengesoft.crmsystem.domain.entity.Attention" resultType="int">
+        select a.AttentionId  from Attention_tb a
+        where a.UserId=#{userId,jdbcType=VARCHAR} and a.ProjectCode=#{projectCode,jdbcType=VARCHAR}
+    </select>
+
+    <!--查看关注的projectCode列表-->
+    <select id="attentionProjectList" parameterType="java.lang.String" resultType="java.lang.String">
+        select a.ProjectCode  from Attention_tb a
+        where a.UserId=#{userId,jdbcType=VARCHAR}
+    </select>
+
+    <!--查看此项目是否被关注 项目详情时 便于进入详情里面修改-->
+    <select id="attentionProjectDetail" parameterType="java.lang.String" resultType="int">
+        select a.AttentionId  from Attention_tb a where a.ProjectCode=#{projectCode,jdbcType=VARCHAR}
+    </select>
+
+
+</mapper>

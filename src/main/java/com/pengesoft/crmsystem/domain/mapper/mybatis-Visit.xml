@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+    拜访记录的MyBatis映射文件.
+    作者：司童.
+    创建时间：2020/3/30 17:23:42.
+    文件由鹏业软件模型工具生成(模板名称：JavaMyBatisMap),一般不应直接修改此文件.
+    Copyright (C) 2008 - 鹏业软件公司
+-->
+
+<mapper namespace="com.pengesoft.crmsystem.domain.dao.VisitDao">
+
+    <resultMap type="com.pengesoft.crmsystem.domain.entity.Visit" id="visitResultMap">
+        <id property="visitId" column="VisitId" />
+        <result property="visitPlanTime" column="VisitPlanTime" />
+        <result property="visitPlanContent" column="VisitPlanContent" />
+        <result property="visitFactTime" column="VisitFactTime" />
+        <result property="visitFactContent" column="VisitFactContent" />
+        <result property="visitRemark" column="VisitRemark" />
+        <result property="projectCode" column="ProjectCode" />
+    </resultMap>
+
+    <sql id="visitBaseCol">
+        t.VisitId,t.VisitPlanTime,t.VisitPlanContent,t.VisitFactTime,t.VisitFactContent,t.VisitRemark,t.ProjectCode
+    </sql>
+
+    <sql id="visitWhereSql">
+        <trim prefix="WHERE" prefixOverrides="and |or ">
+            <if test="visitId != null">and t.VisitId = #{visitId}</if>
+            <if test="visitId_L != null"><![CDATA[ and t.VisitId >= #{visitId_L} and t.VisitId <= #{visitId_H} ]]></if>
+            <if test="visitId_Enum != null">
+                and t.VisitId in
+                <foreach collection="visitId_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="visitPlanTime != null">and t.VisitPlanTime = #{visitPlanTime}</if>
+            <if test="visitPlanTime_S != null"><![CDATA[ and t.VisitPlanTime > #{visitPlanTime_S} and t.VisitPlanTime < #{visitPlanTime_E} ]]></if>
+            <if test="visitFactContent != null">
+                <if test="visitFactContent == ''">
+                    and (t.VisitFactContent is null or t.VisitFactContent = '')
+                </if>
+                <if test="visitFactContent != ''">
+                    and t.VisitFactContent like #{visitFactContent}
+                </if>
+            </if>
+            <if test="visitFactContent_Enum != null">
+                and t.VisitFactContent in
+                <foreach collection="visitFactContent_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="projectCode != null">
+                <if test="projectCode == ''">
+                    and (t.ProjectCode is null or t.ProjectCode = '')
+                </if>
+                <if test="projectCode != ''">
+                    and t.ProjectCode like #{projectCode}
+                </if>
+            </if>
+            <if test="projectCode_Enum != null">
+                and t.ProjectCode in
+                <foreach collection="projectCode_Enum" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="_default_mulattr != null">
+                and (
+                <foreach collection="_default_mulattr" item="item" separator=" or ">
+                    <if test="item.name == 'visitId'">t.VisitId = #{item.value}</if>
+                    <if test="item.name == 'visitPlanTime'">t.VisitPlanTime = #{item.value}</if>
+                    <if test="item.name == 'visitFactContent'">t.VisitFactContent like #{item.value}</if>
+                    <if test="item.name == 'projectCode'">t.ProjectCode like #{item.value}</if>
+                </foreach>
+                )
+            </if>
+        </trim>
+    </sql>
+
+    <sql id="visitOrderSql">
+        <trim prefix="ORDER BY" suffixOverrides=",">
+            <if test="_orderBys != null">
+                <foreach collection="_orderBys" item="item" open="" separator="," close="">
+                    <if test="item == 'visitId'">t.VisitId</if>
+                    <if test="item == 'visitId_D'">t.VisitId desc</if>
+                    <if test="item == 'visitPlanTime'">t.VisitPlanTime</if>
+                    <if test="item == 'visitPlanTime_D'">t.VisitPlanTime desc</if>
+                    <if test="item == 'visitFactContent'">t.VisitFactContent</if>
+                    <if test="item == 'visitFactContent_D'">t.VisitFactContent desc</if>
+                    <if test="item == 'projectCode'">t.ProjectCode</if>
+                    <if test="item == 'projectCode_D'">t.ProjectCode desc</if>
+                </foreach>
+            </if>
+        </trim>
+    </sql>
+
+    <insert id="insertVisit" parameterType="com.pengesoft.crmsystem.domain.entity.Visit">
+        insert into Visit_tb(
+
+            VisitPlanTime,
+            VisitPlanContent,
+            VisitFactTime,
+            VisitFactContent,
+            VisitRemark,
+            ProjectCode
+        )values(
+
+            #{visitPlanTime,jdbcType=TIMESTAMP},
+            #{visitPlanContent,jdbcType=VARCHAR},
+            #{visitFactTime,jdbcType=TIMESTAMP},
+            #{visitFactContent,jdbcType=VARCHAR},
+            #{visitRemark,jdbcType=VARCHAR},
+            #{projectCode,jdbcType=VARCHAR}
+        )
+    </insert>
+
+    <update id="updateVisit" parameterType="com.pengesoft.crmsystem.domain.entity.Visit">
+        update Visit_tb set
+            VisitPlanTime = #{visitPlanTime,jdbcType=TIMESTAMP},
+            VisitPlanContent = #{visitPlanContent,jdbcType=VARCHAR},
+            VisitFactTime = #{visitFactTime,jdbcType=TIMESTAMP},
+            VisitFactContent = #{visitFactContent,jdbcType=VARCHAR},
+            VisitRemark = #{visitRemark,jdbcType=VARCHAR},
+            ProjectCode = #{projectCode,jdbcType=VARCHAR}
+        where VisitId=#{visitId,jdbcType=INTEGER}
+    </update>
+
+
+    <!--修改拜访计划-->
+    <update id="updateVisitPart" parameterType="com.pengesoft.crmsystem.domain.entity.Visit">
+        update Visit_tb
+        <set>
+            <if test="visitPlanTime != null">
+                VisitPlanTime = #{visitPlanTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="visitPlanContent != null and visitPlanContent != ''">
+                VisitPlanContent = #{visitPlanContent,jdbcType=VARCHAR},
+            </if>
+            <if test="visitRemark != null and visitRemark != ''">
+                VisitRemark = #{visitRemark,jdbcType=VARCHAR},
+            </if>
+            <if test="visitFactTime != null ">
+                VisitFactTime = #{visitFactTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="visitFactContent != null and visitFactContent != ''">
+                VisitFactContent = #{visitFactContent,jdbcType=VARCHAR},
+            </if>
+            <if test="projectCode != null and projectCode != ''">
+                ProjectCode = #{projectCode,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where VisitId=#{visitId,jdbcType=INTEGER}
+    </update>
+
+
+    <!--&lt;!&ndash;修改实际拜访  只有结果的拜访&ndash;&gt;-->
+    <!--<update id="updateFactVisit" parameterType="com.pengesoft.crmsystem.domain.entity.Visit">-->
+        <!--update Visit_tb-->
+        <!--<set>-->
+            <!--<if test="visitFactTime != null and projectName != ''">-->
+                <!--VisitFactTime = #{VisitFactTime,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="visitFactContent != null and projectName != ''">-->
+                <!--VisitFactContent = #{VisitFactContent,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="visitRemark != null and projectName != ''">-->
+                <!--VisitRemark = #{visitRemark,jdbcType=VARCHAR},-->
+            <!--</if>-->
+        <!--</set>-->
+        <!--where VisitId=#{visitId,jdbcType=INTEGER}-->
+    <!--</update>-->
+
+    <delete id="deleteVisit" parameterType="com.pengesoft.crmsystem.domain.entity.Visit">
+        delete from Visit_tb where VisitId=#{visitId,jdbcType=INTEGER}
+    </delete>
+
+
+    <select id="getBaseVisit" parameterType="com.pengesoft.crmsystem.domain.entity.Visit" resultMap="visitResultMap">
+        select
+        <include refid="visitBaseCol" />
+        from Visit_tb t where t.VisitId=#{visitId,jdbcType=INTEGER}
+    </select>
+
+    <select id="getVisit" parameterType="com.pengesoft.crmsystem.domain.entity.Visit" resultMap="visitResultMap">
+        select t.* from Visit_tb t where t.VisitId=#{visitId,jdbcType=INTEGER}
+    </select>
+
+    <select id="queryVisitCount" parameterType="java.util.Map" resultType="int">
+        select count(*) from Visit_tb t
+        <include refid="visitWhereSql" />
+    </select>
+
+    <select id="queryBaseVisitList" parameterType="java.util.Map" resultMap="visitResultMap">
+        select
+        <include refid="visitBaseCol" />
+        from Visit_tb t
+        <include refid="visitWhereSql" />
+        <include refid="visitOrderSql" />
+    </select>
+
+    <select id="queryVisitList" parameterType="java.util.Map" resultMap="visitResultMap">
+        select t.* from Visit_tb t
+        <include refid="visitWhereSql" />
+        <include refid="visitOrderSql" />
+    </select>
+
+    <!--获取项目拜访计划列表-->
+    <select id="queryVisitList1" parameterType="com.pengesoft.crmsystem.domain.entity.Visit" resultMap="visitResultMap">
+        select t.* from Visit_tb t
+        where t.ProjectCode=#{projectCode,jdbcType=VARCHAR}
+            and t.VisitPlanTime is not null and t.VisitFactTime is null Order by t.VisitPlanTime DESC
+    </select>
+
+    <!--获取单独拜访记录列表-->
+    <select id="queryVisitList2" parameterType="com.pengesoft.crmsystem.domain.entity.Visit" resultMap="visitResultMap">
+        select t.* from Visit_tb t
+        where t.ProjectCode=#{projectCode,jdbcType=VARCHAR}
+            and t.VisitFactTime is not null Order by t.VisitFactTime DESC
+    </select>
+
+    <!--删除项目的时候如果有拜访记录 把和项目相关的拜访记录一起删除-->
+    <delete id="deleteByVisits">
+        delete from Visit_tb v where v.VisitId in
+        <foreach collection="visitIdList" open="(" close=")" item="visitId" separator="," >
+            #{visitId,jdbcType=INTEGER}
+        </foreach>
+    </delete>
+
+
+    <!--销售的所有拜访计划-->
+    <select id="getAllVisitPlan" parameterType="java.util.HashMap" resultType="int">
+        select v.VisitId
+        from Project_tb t
+        join Visit_tb v on t.ProjectCode=v.ProjectCode
+        join Customer_tb c on c.CustId=t.CustId
+        join Acc_Persons ap on ap.UniqID=t.UserId where v.VisitFactTime is null and v.VisitPlanTime=#{VisitPlanTime,jdbcType=TIMESTAMP} and t.UserId=#{UserId,jdbcType=VARCHAR}
+        order by v.VisitPlanTime desc
+    </select>
+</mapper>
